@@ -1,0 +1,52 @@
+[GetStopATThreadEvent]
+Class="Function"
+Prototype="HANDLE GetStopATThreadEvent(unsigned char i);"
+
+[GetStartATThreadEvent]
+Class="Function"
+Prototype="HANDLE GetStartATThreadEvent(unsigned char i);"
+
+[SetStartATThreadEvent]
+Class="Function"
+Prototype="void SetStartATThreadEvent(unsigned char i);"
+
+[InitStopATThreadEvent]
+Class="Function"
+Prototype="void InitStopATThreadEvent();"
+
+[DeInitStopATThreadEvent]
+Class="Function"
+Prototype="void DeInitStopATThreadEvent();"
+
+[SetStopATThreadEvent]
+Class="Function"
+Prototype="void SetStopATThreadEvent();"
+
+[InitThreadPool]
+Class="Function"
+Prototype="int InitThreadPool(int iThreadNumber);"
+
+[EdgeCardThreadExec]
+Class="Function"
+Prototype="int EdgeCardThreadExec(HANDLE hCOM);"
+
+[ATParseThreadExec]
+Class="Function"
+Prototype="int ATParseThreadExec();"
+
+[WaitForATParseThread]
+Class="Function"
+Prototype="void WaitForATParseThread();"
+
+[SNWriteThreadExec]
+Class="Function"
+Prototype="int SNWriteThreadExec();"
+
+[MetaThreadExec]
+Class="Function"
+Prototype="int MetaThreadExec();"
+
+[DeInitThreadPool]
+Class="Function"
+Prototype="int DeInitThreadPool();"
+

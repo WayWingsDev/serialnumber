@@ -1,0 +1,554 @@
+ eboot
+
+ Timestamp is 4a1278de (Tue May 19 17:16:14 2009)
+
+ Preferred load address is 06000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000c762H .text                   CODE
+ 0001:0000c770 00001660H .text$x                 CODE
+ 0001:0000ddd0 00010000H .textbss                CODE
+ 0002:00000000 000015f1H .rdata                  DATA
+ 0002:000015f8 00000151H .rdata$r                DATA
+ 0002:00001750 00001434H .xdata$x                DATA
+ 0002:00002b90 00000280H .edata                  DATA
+ 0003:00000000 00000104H .CRT$XCA                DATA
+ 0003:00000104 00000122H .CRT$XCU                DATA
+ 0003:00000228 00000104H .CRT$XCZ                DATA
+ 0003:0000032c 00000104H .CRT$XIA                DATA
+ 0003:00000430 00000104H .CRT$XIZ                DATA
+ 0003:00000540 0000022fH .data                   DATA
+ 0003:00000770 00133934H .bss                    DATA
+ 0004:00000000 00000064H .idata$2                DATA
+ 0004:00000064 00000014H .idata$3                DATA
+ 0004:00000078 00000228H .idata$4                DATA
+ 0004:000002a0 00000228H .idata$5                DATA
+ 0004:000004c8 0000067bH .idata$6                DATA
+ 0005:00000000 00000169H .rsrc$01                DATA
+ 0005:00000170 00000726H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:00000a50       _DllMain@12                06001a50 f   dll_main.obj
+ 0001:00000ca0       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBDABV?$allocator@D@1@@Z 06001ca0 f i dll_main.obj
+ 0001:00000d10       ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 06001d10 f i dll_main.obj
+ 0001:00000d60       ??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z 06001d60 f i dll_main.obj
+ 0001:00000db0       ?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ 06001db0 f i dll_main.obj
+ 0001:00000e10       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBD@Z 06001e10 f i dll_main.obj
+ 0001:00000e80       ?_Nullstr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAPBDXZ 06001e80 f i dll_main.obj
+ 0001:00000eb0       ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEX_N@Z 06001eb0 f i dll_main.obj
+ 0001:00000fc0       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBDI@Z 06001fc0 f i dll_main.obj
+ 0001:00001060       ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXI@Z 06002060 f i dll_main.obj
+ 0001:000010e0       ?_Grow@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAE_NI_N@Z 060020e0 f i dll_main.obj
+ 0001:000012b0       ?_Refcnt@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAEPBD@Z 060022b0 f i dll_main.obj
+ 0001:000012f0       ?deallocate@?$allocator@D@std@@QAEXPAXI@Z 060022f0 f i dll_main.obj
+ 0001:00001340       ?max_size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIXZ 06002340 f i dll_main.obj
+ 0001:000013b0       ?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXI@Z 060023b0 f i dll_main.obj
+ 0001:00001530       ?allocate@?$allocator@D@std@@QAEPADIPBX@Z 06002530 f i dll_main.obj
+ 0001:00001580       ?max_size@?$allocator@D@std@@QBEIXZ 06002580 f i dll_main.obj
+ 0001:000015e0       ?_Allocate@std@@YAPADHPAD@Z 060025e0 f i dll_main.obj
+ 0001:00001640       ?CreateEbootProcess@@YAHPAD@Z 06002640 f   eboot.obj
+ 0001:00001850       ?SendImage@@YAHPAX0KPAH@Z  06002850 f   eboot.obj
+ 0001:00001f40       ?GetEbootComPort@@YAHAAPAXPAHHPAUDownload_Context@@@Z 06002f40 f   eboot.obj
+ 0001:00002470       ?BootMode@@YA?AW4EBOOT_RESULT@@AAPAXHW4COMM_BAUDRATE@@@Z 06003470 f   eboot.obj
+ 0001:00002ce0       ?eboot_strcmp@@YA_NPADK00K@Z 06003ce0 f   eboot.obj
+ 0001:00002da0       _SP_BootAsMeta@20          06003da0 f   eboot.obj
+ 0001:00003200       ??0eboot_slight_exception@@QAE@XZ 06004200 f i eboot.obj
+ 0001:00003260       ??1eboot_slight_exception@@UAE@XZ 06004260 f i eboot.obj
+ 0001:000032c0       ?what@eboot_slight_exception@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 060042c0 f i eboot.obj
+ 0001:00003330       ??_Geboot_slight_exception@@UAEPAXI@Z 06004330 f i eboot.obj
+ 0001:00003330       ??_Eeboot_slight_exception@@UAEPAXI@Z 06004330 f i eboot.obj
+ 0001:000033a0       ??0eboot_slight_exception@@QAE@ABV0@@Z 060043a0 f i eboot.obj
+ 0001:00003410       _SP_BootAsFactoryNormalMode@8 06004410 f   eboot.obj
+ 0001:000039f0       ?trace@@YAHPBDZZ           060049f0 f   eboot.obj
+ 0001:00003b00       ?Read_pattern_ack@@YAHPBDIPAD1IPAHPAXH@Z 06004b00 f   eboot.obj
+ 0001:00003d60       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV?$allocator@D@1@@Z 06004d60 f i eboot.obj
+ 0001:00003dc0       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV01@@Z 06004dc0 f i eboot.obj
+ 0001:00003e40       ?begin@?$vector@HV?$allocator@H@std@@@std@@QAEPAHXZ 06004e40 f i eboot.obj
+ 0001:00003e80       ?end@?$vector@HV?$allocator@H@std@@@std@@QAEPAHXZ 06004e80 f i eboot.obj
+ 0001:00003ec0       ?size@?$vector@HV?$allocator@H@std@@@std@@QBEIXZ 06004ec0 f i eboot.obj
+ 0001:00003f20       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@ABV12@II@Z 06004f20 f i eboot.obj
+ 0001:00004110       ?size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIXZ 06005110 f i eboot.obj
+ 0001:00004150       ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z 06005150 f i eboot.obj
+ 0001:00004260       ?capacity@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIXZ 06005260 f i eboot.obj
+ 0001:000042a0       ?_Freeze@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXXZ 060052a0 f i eboot.obj
+ 0001:00004360       ?find@std@@YAPAHPAH0ABH@Z  06005360 f i eboot.obj
+ 0001:000043c0       ??8std@@YA_NABV?$allocator@D@0@0@Z 060053c0 f i eboot.obj
+ 0001:00004520       ?Eboot_GetDLLInfo@@YGHPAPBD000@Z 06005520 f   eboot_debug.obj
+ 0001:00004870       ?Eboot_DebugOn@@YGHXZ      06005870 f   eboot_debug.obj
+ 0001:000049c0       ?Eboot_DebugOff@@YGHXZ     060059c0 f   eboot_debug.obj
+ 0001:00004aa0       ?Eboot_DebugClear@@YGHXZ   06005aa0 f   eboot_debug.obj
+ 0001:00004c20       _Eboot_GetDLLVer@16        06005c20 f   eboot_debug.obj
+ 0001:00005080       ??0?$ArrayObj@D@@QAE@H@Z   06006080 f i eboot_debug.obj
+ 0001:00005120       ??1?$ArrayObj@D@@UAE@XZ    06006120 f i eboot_debug.obj
+ 0001:00005190       ?GetArray@?$ArrayObj@D@@QAEPADXZ 06006190 f i eboot_debug.obj
+ 0001:000051d0       ??_G?$ArrayObj@D@@UAEPAXI@Z 060061d0 f i eboot_debug.obj
+ 0001:000051d0       ??_E?$ArrayObj@D@@UAEPAXI@Z 060061d0 f i eboot_debug.obj
+ 0001:00005240       _SP_Flash_Download@20      06006240 f   FT_Download.obj
+ 0001:00005330       ??0FTDownload@@QAE@XZ      06006330 f   FT_Download.obj
+ 0001:000053e0       ??0Download_Context@@QAE@XZ 060063e0 f i FT_Download.obj
+ 0001:00005430       ??1Download_Context@@QAE@XZ 06006430 f i FT_Download.obj
+ 0001:00005480       ??0FTDownload@@QAE@UFT_Download_ARG@@@Z 06006480 f   FT_Download.obj
+ 0001:00005560       ??1FTDownload@@QAE@XZ      06006560 f   FT_Download.obj
+ 0001:00005750       ?Initial@FTDownload@@IAEXXZ 06006750 f   FT_Download.obj
+ 0001:000057c0       ?Get_error_code@FTDownload@@QAE?AW4EBOOT_RESULT@@XZ 060067c0 f   FT_Download.obj
+ 0001:00005800       ?Download@FTDownload@@UAEXXZ 06006800 f   FT_Download.obj
+ 0001:00005a80       ?Check_stop_flag@FTDownload@@IAEXXZ 06006a80 f   FT_Download.obj
+ 0001:00005b00       ?open_wince_usb_port@FTDownload@@IAEHXZ 06006b00 f   FT_Download.obj
+ 0001:00005c90       ??0eboot_fault_exception@@QAE@XZ 06006c90 f i FT_Download.obj
+ 0001:00005cf0       ?what@eboot_fault_exception@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 06006cf0 f i FT_Download.obj
+ 0001:00005d60       ??1eboot_fault_exception@@UAE@XZ 06006d60 f i FT_Download.obj
+ 0001:00005dc0       ??_Geboot_fault_exception@@UAEPAXI@Z 06006dc0 f i FT_Download.obj
+ 0001:00005dc0       ??_Eeboot_fault_exception@@UAEPAXI@Z 06006dc0 f i FT_Download.obj
+ 0001:00005e30       ??0eboot_fault_exception@@QAE@ABV0@@Z 06006e30 f i FT_Download.obj
+ 0001:00005ea0       ?open_flash_file@FTDownload@@IAEHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z 06006ea0 f   FT_Download.obj
+ 0001:00006030       ?Boot@FTDownload@@MAEHXZ   06007030 f   FT_Download.obj
+ 0001:000062b0       ?Wait_ready_pattern@FTDownload@@IAEHXZ 060072b0 f   FT_Download.obj
+ 0001:00006400       ?Write_pattern@FTDownload@@IAEHPBDI@Z 06007400 f   FT_Download.obj
+ 0001:00006510       ?Read_ack@FTDownload@@IAEHPBDIPAD1@Z 06007510 f   FT_Download.obj
+ 0001:00006590       ?Write_and_read_dl_pattern@FTDownload@@IAEHXZ 06007590 f   FT_Download.obj
+ 0001:00006740       ?Scan_exist_wince_usb_port@FTDownload@@IAEXXZ 06007740 f   FT_Download.obj
+ 0001:00006940       ?SendImage@FTDownload@@IAEHXZ 06007940 f   FT_Download.obj
+ 0001:00006e50       ??0?$vector@HV?$allocator@H@std@@@std@@QAE@ABV?$allocator@H@1@@Z 06007e50 f i FT_Download.obj
+ 0001:00006ec0       ??1?$vector@HV?$allocator@H@std@@@std@@QAE@XZ 06007ec0 f i FT_Download.obj
+ 0001:00006f70       ?push_back@?$vector@HV?$allocator@H@std@@@std@@QAEXABH@Z 06007f70 f i FT_Download.obj
+ 0001:00006fd0       ?insert@?$vector@HV?$allocator@H@std@@@std@@QAEPAHPAHABH@Z 06007fd0 f i FT_Download.obj
+ 0001:00007050       ?_Destroy@?$vector@HV?$allocator@H@std@@@std@@IAEXPAH0@Z 06008050 f i FT_Download.obj
+ 0001:000070c0       ?deallocate@?$allocator@H@std@@QAEXPAXI@Z 060080c0 f i FT_Download.obj
+ 0001:00007110       ?insert@?$vector@HV?$allocator@H@std@@@std@@QAEXPAHIABH@Z 06008110 f i FT_Download.obj
+ 0001:000073e0       ?destroy@?$allocator@H@std@@QAEXPAH@Z 060083e0 f i FT_Download.obj
+ 0001:00007430       ?_Ucopy@?$vector@HV?$allocator@H@std@@@std@@IAEPAHPBH0PAH@Z 06008430 f i FT_Download.obj
+ 0001:000074b0       ?_Ufill@?$vector@HV?$allocator@H@std@@@std@@IAEXPAHIABH@Z 060084b0 f i FT_Download.obj
+ 0001:00007530       ?allocate@?$allocator@H@std@@QAEPAHIPBX@Z 06008530 f i FT_Download.obj
+ 0001:00007580       ?construct@?$allocator@H@std@@QAEXPAHABH@Z 06008580 f i FT_Download.obj
+ 0001:000075d0       ?fill@std@@YAXPAH0ABH@Z    060085d0 f i FT_Download.obj
+ 0001:00007620       ?copy_backward@std@@YAPAHPAH00@Z 06008620 f i FT_Download.obj
+ 0001:00007680       ?_Destroy@std@@YAXPAH@Z    06008680 f i FT_Download.obj
+ 0001:000076b0       ?_Allocate@std@@YAPAHHPAH@Z 060086b0 f i FT_Download.obj
+ 0001:00007710       ?_Construct@std@@YAXPAHABH@Z 06008710 f i FT_Download.obj
+ 0001:00007780       ??2@YAPAXIPAX@Z            06008780 f i FT_Download.obj
+ 0001:000077b0       ??0MetaTraceHandle@@QAE@PBD@Z 060087b0 f   Mdebug.obj
+ 0001:000078e0       ??1MetaTraceHandle@@QAE@XZ 060088e0 f   Mdebug.obj
+ 0001:000079a0       ??0MetaTrace_Handle_Sentry@@QAE@AAPAUMetaTraceHandle@@PBD_N2E11@Z 060089a0 f   Mdebug.obj
+ 0001:00007a50       ??1MetaTrace_Handle_Sentry@@QAE@XZ 06008a50 f   Mdebug.obj
+ 0001:00007ab0       ??0MetaTrace_Log_Sentry@@QAE@AAPAUMetaTraceHandle@@PBD1@Z 06008ab0 f   Mdebug.obj
+ 0001:00007ce0       ??1MetaTrace_Log_Sentry@@QAE@XZ 06008ce0 f   Mdebug.obj
+ 0001:00008000       ??0InitMdebug@@QAE@XZ      06009000 f   Mdebug.obj
+ 0001:00008060       ??1InitMdebug@@QAE@XZ      06009060 f   Mdebug.obj
+ 0001:000080c0       ??0MetaTrace@@QAE@PBDHE0@Z 060090c0 f   Mdebug.obj
+ 0001:00008190       ??_GMetaTrace@@UAEPAXI@Z   06009190 f i Mdebug.obj
+ 0001:00008190       ??_EMetaTrace@@UAEPAXI@Z   06009190 f i Mdebug.obj
+ 0001:00008200       ??1MetaTrace@@UAE@XZ       06009200 f   Mdebug.obj
+ 0001:00008240       ??RMetaTrace@@QAAXPAUMetaTraceHandle@@PBDZZ 06009240 f   Mdebug.obj
+ 0001:00008600       ??0CCriticalSectionSentry@@QAE@AAU_RTL_CRITICAL_SECTION@@@Z 06009600 f i Mdebug.obj
+ 0001:00008670       ??1CCriticalSectionSentry@@QAE@XZ 06009670 f i Mdebug.obj
+ 0001:000086d0       _MTRACE_Create             060096d0 f   Mdebug.obj
+ 0001:00008810       _MTRACE_Destroy            06009810 f   Mdebug.obj
+ 0001:000088c0       ??_GMetaTraceHandle@@QAEPAXI@Z 060098c0 f i Mdebug.obj
+ 0001:00008930       _MTRACE_ON                 06009930 f   Mdebug.obj
+ 0001:000089b0       _MTRACE_OFF                060099b0 f   Mdebug.obj
+ 0001:00008a30       _MTRACE_IsTraceEnabled     06009a30 f   Mdebug.obj
+ 0001:00008aa0       _MTRACE_SetSysTrace        06009aa0 f   Mdebug.obj
+ 0001:00008b20       _MTRACE_SetLevel           06009b20 f   Mdebug.obj
+ 0001:00008ba0       _MTRACE_GetLevel           06009ba0 f   Mdebug.obj
+ 0001:00008c30       _MTRACE_IsDumpFileOpen     06009c30 f   Mdebug.obj
+ 0001:00008c70       _MTRACE_DumpToStdio        06009c70 f   Mdebug.obj
+ 0001:00008e00       _MTRACE_DumpFileOpen       06009e00 f   Mdebug.obj
+ 0001:00008fa0       _MTRACE_DumpFileClose      06009fa0 f   Mdebug.obj
+ 0001:000090b0       _MTRACE_DumpFileClear      0600a0b0 f   Mdebug.obj
+ 0001:00009290       _MTRACE_ComposeDumpBuf     0600a290 f   Mdebug.obj
+ 0001:00009590       ?MTRACE_Empty@@YAXPAUMetaTraceHandle@@PBDZZ 0600a590 f   Mdebug.obj
+ 0001:000095c0       _SP_MPDownload@48          0600a5c0 f   MP_Download.obj
+ 0001:000096b0       _CloseActiveSync@0         0600a6b0 f   MP_Download.obj
+ 0001:00009700       _RestartActiveSync@4       0600a700 f   MP_Download.obj
+ 0001:00009850       ??0MPDownload@@QAE@UMP_Download_ARG@@@Z 0600a850 f   MP_Download.obj
+ 0001:00009970       ??1MPDownload@@QAE@XZ      0600a970 f   MP_Download.obj
+ 0001:00009a40       ?Check_stop_flag@MPDownload@@IAEXXZ 0600aa40 f   MP_Download.obj
+ 0001:00009ac0       ?open_wince_usb_port@MPDownload@@IAEHXZ 0600aac0 f   MP_Download.obj
+ 0001:00009c60       ?Download@MPDownload@@UAEXXZ 0600ac60 f   MP_Download.obj
+ 0001:00009f60       ?WaitForPlatform@@YAHPAX@Z 0600af60 f   MP_Download.obj
+ 0001:0000a0f0       ?Write_and_read_wait_pattern@MPDownload@@IAEHXZ 0600b0f0 f   MP_Download.obj
+ 0001:0000a2d0       ?Write_and_read_go_on_pattern@MPDownload@@IAEHXZ 0600b2d0 f   MP_Download.obj
+ 0001:0000a4b0       ?Boot@MPDownload@@MAEHXZ   0600b4b0 f   MP_Download.obj
+ 0001:0000a7a0       ?wait_all_thread_finish@MPDownload@@IAEXXZ 0600b7a0 f   MP_Download.obj
+ 0001:0000a8d0       ?Wait_entre_mpdl_mode_permitted@MPDownload@@IAEHXZ 0600b8d0 f   MP_Download.obj
+ 0001:0000a9f0       ?SendImage@MPDownload@@IAEHXZ 0600b9f0 f   MP_Download.obj
+ 0001:0000af30       ?GetActiveSyncPath@@YAHAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 0600bf30 f   MP_Download.obj
+ 0001:0000b0b0       ??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z 0600c0b0 f i MP_Download.obj
+ 0001:0000b100       ?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBD@Z 0600c100 f i MP_Download.obj
+ 0001:0000b170       ?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBDI@Z 0600c170 f i MP_Download.obj
+ 0001:0000b24a       _GetModuleFileNameA@12     0600c24a f   kernel32:KERNEL32.dll
+ 0001:0000b250       _CreateProcessA@40         0600c250 f   kernel32:KERNEL32.dll
+ 0001:0000b256       _SetFilePointer@16         0600c256 f   kernel32:KERNEL32.dll
+ 0001:0000b25c       _WriteFile@20              0600c25c f   kernel32:KERNEL32.dll
+ 0001:0000b262       _ReadFile@20               0600c262 f   kernel32:KERNEL32.dll
+ 0001:0000b268       _GetLocalTime@4            0600c268 f   kernel32:KERNEL32.dll
+ 0001:0000b26e       _CreateFileA@28            0600c26e f   kernel32:KERNEL32.dll
+ 0001:0000b274       _Sleep@4                   0600c274 f   kernel32:KERNEL32.dll
+ 0001:0000b27a       _SetCommTimeouts@8         0600c27a f   kernel32:KERNEL32.dll
+ 0001:0000b280       _PurgeComm@8               0600c280 f   kernel32:KERNEL32.dll
+ 0001:0000b286       _SetCommState@8            0600c286 f   kernel32:KERNEL32.dll
+ 0001:0000b28c       _GetCommState@8            0600c28c f   kernel32:KERNEL32.dll
+ 0001:0000b292       _CloseHandle@4             0600c292 f   kernel32:KERNEL32.dll
+ 0001:0000b298       _SetupComm@12              0600c298 f   kernel32:KERNEL32.dll
+ 0001:0000b29e       _ClearCommError@12         0600c29e f   kernel32:KERNEL32.dll
+ 0001:0000b2a4       _GetLastError@0            0600c2a4 f   kernel32:KERNEL32.dll
+ 0001:0000b2aa       _GetFileSize@8             0600c2aa f   kernel32:KERNEL32.dll
+ 0001:0000b2b0       _InitializeCriticalSection@4 0600c2b0 f   kernel32:KERNEL32.dll
+ 0001:0000b2b6       _DeleteCriticalSection@4   0600c2b6 f   kernel32:KERNEL32.dll
+ 0001:0000b2bc       _OutputDebugStringA@4      0600c2bc f   kernel32:KERNEL32.dll
+ 0001:0000b2c2       _GetCurrentThreadId@0      0600c2c2 f   kernel32:KERNEL32.dll
+ 0001:0000b2c8       _GetCurrentProcessId@0     0600c2c8 f   kernel32:KERNEL32.dll
+ 0001:0000b2ce       _EnterCriticalSection@4    0600c2ce f   kernel32:KERNEL32.dll
+ 0001:0000b2d4       _LeaveCriticalSection@4    0600c2d4 f   kernel32:KERNEL32.dll
+ 0001:0000b2da       _RegCloseKey@4             0600c2da f   advapi32:ADVAPI32.dll
+ 0001:0000b2e0       _RegQueryValueExA@24       0600c2e0 f   advapi32:ADVAPI32.dll
+ 0001:0000b2e6       _RegOpenKeyExA@20          0600c2e6 f   advapi32:ADVAPI32.dll
+ 0001:0000b2ec       _VerQueryValueA@16         0600c2ec f   version:VERSION.dll
+ 0001:0000b2f2       _GetFileVersionInfoA@16    0600c2f2 f   version:VERSION.dll
+ 0001:0000b2f8       _GetFileVersionInfoSizeA@8 0600c2f8 f   version:VERSION.dll
+ 0001:0000b2fe       ?length@?$char_traits@D@std@@SAIPBD@Z 0600c2fe f   msvcprtd:MSVCP60D.dll
+ 0001:0000b304       ?copy@?$char_traits@D@std@@SAPADPADPBDI@Z 0600c304 f   msvcprtd:MSVCP60D.dll
+ 0001:0000b30a       ?assign@?$char_traits@D@std@@SAXAADABD@Z 0600c30a f   msvcprtd:MSVCP60D.dll
+ 0001:0000b310       ?_Xlen@std@@YAXXZ          0600c310 f   msvcprtd:MSVCP60D.dll
+ 0001:0000b320       ??3@YAXPAX@Z               0600c320 f   msvcprtd:delop_s.obj
+ 0001:0000b332       ?_Xran@std@@YAXXZ          0600c332 f   msvcprtd:MSVCP60D.dll
+ 0001:0000b338       ?move@?$char_traits@D@std@@SAPADPADPBDI@Z 0600c338 f   msvcprtd:MSVCP60D.dll
+ 0001:0000b33e       __chkesp                   0600c33e f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b350       __onexit                   0600c350 f   MSVCRTD:atonexit.obj
+ 0001:0000b390       _atexit                    0600c390 f   MSVCRTD:atonexit.obj
+ 0001:0000b3a8       _fclose                    0600c3a8 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3ae       _sprintf                   0600c3ae f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3b4       _localtime                 0600c3b4 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3ba       __fstat                    0600c3ba f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3c0       _fopen                     0600c3c0 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3c6       ___CxxFrameHandler         0600c3c6 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3d0       ??2@YAPAXI@Z               0600c3d0 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3d6       _memset                    0600c3d6 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3dc       _malloc                    0600c3dc f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3e2       ??0exception@@QAE@ABV0@@Z  0600c3e2 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b3f0       ??0type_info@@AAE@ABV0@@Z  0600c3f0 f   MSVCRTD:ti_inst.obj
+ 0001:0000b410       ??_Etype_info@@UAEPAXI@Z   0600c410 f i MSVCRTD:ti_inst.obj
+ 0001:0000b410       ??_Gtype_info@@UAEPAXI@Z   0600c410 f i MSVCRTD:ti_inst.obj
+ 0001:0000b440       ??4type_info@@AAEAAV0@ABV0@@Z 0600c440 f   MSVCRTD:ti_inst.obj
+ 0001:0000b450       ??1exception@@UAE@XZ       0600c450 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b456       ??0exception@@QAE@ABQBD@Z  0600c456 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b45c       __CxxThrowException@8      0600c45c f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b462       _memcmp                    0600c462 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b468       _memcpy                    0600c468 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b46e       __vsnprintf                0600c46e f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b474       __ftol                     0600c474 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b47a       _strcpy                    0600c47a f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b480       _strncpy                   0600c480 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b486       _strlen                    0600c486 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b48c       _strrchr                   0600c48c f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b492       _fflush                    0600c492 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b498       _fprintf                   0600c498 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b49e       __snprintf                 0600c49e f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b4b0       __CRT_INIT@12              0600c4b0 f   MSVCRTD:crtdll.obj
+ 0001:0000b5c0       __DllMainCRTStartup@12     0600c5c0 f   MSVCRTD:crtdll.obj
+ 0001:0000b6b4       _free                      0600c6b4 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b6ba       ___dllonexit               0600c6ba f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b6c0       ??1type_info@@UAE@XZ       0600c6c0 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b6c6       __free_dbg                 0600c6c6 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b6cc       __initterm                 0600c6cc f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b6d2       __malloc_dbg               0600c6d2 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000b6e0       __fileno                   0600c6e0 f   MSVCRTD:MSVCRTD.dll
+ 0001:0000ddd0       __enc$textbss$begin        0600edd0     <linker-defined>
+ 0001:0001ddd0       __enc$textbss$end          0601edd0     <linker-defined>
+ 0002:0000001c       ??_C@_00A@?$AA@            0601f01c     dll_main.obj
+ 0002:00000020       ??_C@_0BO@LLMP@?$CF02d?1?$CF02d?1?$CF02d?5?$CF02d?3?$CF02d?3?$CF02d?$AA@ 0601f020     dll_main.obj
+ 0002:00000044       ??_C@_02JKAF@rb?$AA@       0601f044     dll_main.obj
+ 0002:00000048       ?_C@?1??_Nullstr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAPBDXZ@4DB 0601f048     dll_main.obj
+ 0002:0000004c       ??_C@_0BN@POL@Create?5Process?5?$CFs?5Successful?$AA@ 0601f04c     eboot.obj
+ 0002:00000070       ??_C@_0BM@PBKE@d?3?2sp_eboot?2eboot?2eboot?4cpp?$AA@ 0601f070     eboot.obj
+ 0002:00000094       ??_C@_0BH@OBGE@Create?5Process?5?$CFs?5Fail?$AA@ 0601f094     eboot.obj
+ 0002:000000b0       ??_C@_0CC@LBLO@?6?6period?$DN?5?$CFd?5s?5DnSpeed?5?$DN?5?$CFd?5KB?1s@ 0601f0b0     eboot.obj
+ 0002:000000d8       ??_C@_0BM@FBPK@?5?5User?5Press?5Stop?5Buuton?$CB?$CB?5?$AA@ 0601f0d8     eboot.obj
+ 0002:000000fc       ??_C@_0BD@BGJA@Progress?3?5?$CFd?5of?5?$CFd?$AA@ 0601f0fc     eboot.obj
+ 0002:00000114       ??_C@_0BE@KGFJ@?5?5WriteFile?5failed?5?$AA@ 0601f114     eboot.obj
+ 0002:0000012c       ??_C@_0BD@MPPM@ReadFile?5failed?$CB?$CB?5?$AA@ 0601f12c     eboot.obj
+ 0002:00000144       ??_C@_0BD@DEOO@?5?5ReadFile?5failed?5?$AA@ 0601f144     eboot.obj
+ 0002:0000015c       ??_C@_0BH@LPAG@alloc?5buffer?5failed?$CB?$CB?5?$AA@ 0601f15c     eboot.obj
+ 0002:00000178       ??_C@_0BC@LJIB@Enter?5Send?5Image?5?$AA@ 0601f178     eboot.obj
+ 0002:00000190       ??_C@_0BA@MMIO@GetEbootComPort?$AA@ 0601f190     eboot.obj
+ 0002:000001a4       ??_C@_0BK@FDBK@?$FLCOM?$CFd?$FN?5Eboot?5exception?5?$CB?$AA@ 0601f1a4     eboot.obj
+ 0002:000001c4       ??_C@_0BJ@KGE@User?5press?5stop?5button?5?$CB?$AA@ 0601f1c4     eboot.obj
+ 0002:000001e4       ??_C@_0DF@MMFI@?$FLCOM?$CFd?$FN?5Sucess?5to?5open?5?0?5USB?5Por@ 0601f1e4     eboot.obj
+ 0002:00000224       ??_C@_0BB@LLAC@?2?2?4?2WCEUSBSH?$CF03d?$AA@ 0601f224     eboot.obj
+ 0002:00000238       ??_C@_0CP@EBJP@?$FLCOM?$CFd?$FN?5Wce?5usb?5port?5?$CFd?5already?5@ 0601f238     eboot.obj
+ 0002:00000270       ??_C@_0BC@OFDC@BootMode?5Success?$CB?$AA@ 0601f270     eboot.obj
+ 0002:00000288       ??_C@_0BB@CJGG@BootMode?5Fial?56?$CB?$AA@ 0601f288     eboot.obj
+ 0002:0000029c       ??_C@_0BB@BCJJ@BootMode?5Fial?55?$CB?$AA@ 0601f29c     eboot.obj
+ 0002:000002b0       ??_C@_0BB@EDD@BootMode?5Fial?54?$CB?$AA@ 0601f2b0     eboot.obj
+ 0002:000002c4       ??_C@_0BB@GFGG@BootMode?5Fial?53?$CB?$AA@ 0601f2c4     eboot.obj
+ 0002:000002d8       ??_C@_0BB@HDMM@BootMode?5Fial?52?$CB?$AA@ 0601f2d8     eboot.obj
+ 0002:000002ec       ??_C@_0BB@EIDD@BootMode?5Fial?51?$CB?$AA@ 0601f2ec     eboot.obj
+ 0002:00000300       ??_C@_09GLGJ@?2?2?4?2COM?$CFd?$AA@ 0601f300     eboot.obj
+ 0002:0000030c       ??_C@_0BP@BEID@?$FLCOM?$CFd?$FN?5?5Read?5MTEA?5ACK?5Error?5?$CB?$AA@ 0601f30c     eboot.obj
+ 0002:00000334       ??_C@_0CG@GGFC@?$FLCOM?$CFd?$FN?5?5Could?5not?5write?5MTEA?5?5t@ 0601f334     eboot.obj
+ 0002:00000364       ??_C@_0CI@GDJD@?$FLCOM?$CFd?$FN?5?5Read?5Ready?5Pattern?5ACK?5@ 0601f364     eboot.obj
+ 0002:00000394       ??_C@_0CD@CNJI@SP_BootAsMeta?5Set?5Boot?5Mode?5fail@ 0601f394     eboot.obj
+ 0002:000003c0       ??_C@_0BH@DACF@Try?5to?5entry?5Boot?5Mode?$AA@ 0601f3c0     eboot.obj
+ 0002:000003dc       ??_C@_05HKPI@READY?$AA@    0601f3dc     eboot.obj
+ 0002:000003e4       ??_C@_08LMFD@ATEMATEM?$AA@ 0601f3e4     eboot.obj
+ 0002:000003f0       ??_C@_08BKAM@METAMETA?$AA@ 0601f3f0     eboot.obj
+ 0002:000003fc       ??_7eboot_slight_exception@@6B@ 0601f3fc     eboot.obj
+ 0002:00000408       ??_C@_0EF@MJOO@ACK?5and?5ReadACK?5compare?5success?0@ 0601f408     eboot.obj
+ 0002:0000045c       ??_C@_0CA@FAJK@ACK?5and?5ReadACK?5compare?5error?$CB?$CB?$AA@ 0601f45c     eboot.obj
+ 0002:00000484       ??_C@_0CH@FICC@Could?5not?5read?5META?5ACK?5data?5fro@ 0601f484     eboot.obj
+ 0002:000004b4       ??_C@_0CC@IPCN@Could?5not?5write?5MODE?5data?5to?5WM?$CB@ 0601f4b4     eboot.obj
+ 0002:000004dc       ??_C@_0CA@FIID@READY?5pattern?5compare?5success?$CB?$CB?$AA@ 0601f4dc     eboot.obj
+ 0002:00000504       ??_C@_0DA@OPGP@READY?5pattern?5compare?5error?0?5may@ 0601f504     eboot.obj
+ 0002:00000540       ??_C@_0BP@IDJH@Could?5not?5read?5READY?5from?5WM?$CB?$CB?$AA@ 0601f540     eboot.obj
+ 0002:00000568       ??_C@_0CD@CNOK@Enter?5SP_BootAsFactoryNormalMode@ 0601f568     eboot.obj
+ 0002:00000594       ??_C@_08EEEA@MYROTCAF?$AA@ 0601f594     eboot.obj
+ 0002:000005a0       ??_C@_08HLMF@FACTORYM?$AA@ 0601f5a0     eboot.obj
+ 0002:000005ac       ??_C@_0CB@NAAD@?$FLCOM?$CFd?$FN?5?5User?5Press?5Stop?5Button?$CB@ 0601f5ac     eboot.obj
+ 0002:000005d4       ??_C@_0CC@KGHH@?$FLCOM?$CFd?$FN?5Read?5?$CFs?5compare?5success?$CB@ 0601f5d4     eboot.obj
+ 0002:000005fc       ??_C@_0CB@PHMO@?$FLCOM?$CFd?$FN?5Read?5?$CFs?5compare?5error?$CB?$CB?$CB@ 0601f5fc     eboot.obj
+ 0002:00000624       ??_C@_0CN@JDKD@?$FLCOM?$CFd?$FN?5?5Read?5len?5?$CFd?5less?5than?5r@ 0601f624     eboot.obj
+ 0002:0000065c       ??_C@_0BH@BOIC@?$FLCOM?$CFd?$FN?5?5retry?5over?5?$CB?$CB?$AA@ 0601f65c     eboot.obj
+ 0002:00000678       ??_C@_0CG@LGHE@?$FLCOM?$CFd?$FN?5?5Could?5not?5read?5?5?$CFs?5from@ 0601f678     eboot.obj
+ 0002:000006a8       ?npos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@2IB 0601f6a8     eboot.obj
+ 0002:000006ac       ??_C@_09HOEP@EBOOT_DLL?$AA@ 0601f6ac     eboot_debug.obj
+ 0002:000006b8       ??_C@_01LLF@w?$AA@         0601f6b8     eboot_debug.obj
+ 0002:000006bc       ??_C@_0CE@MCDF@Eboot_GetDLLInfo?$CI?$CJ?3?5LoadPath?$DN?$CF?91@ 0601f6bc     eboot_debug.obj
+ 0002:000006e8       ??_C@_0CH@MMNH@Eboot_GetDLLInfo?$CI?$CJ?3?5Build?9Date?3?5@ 0601f6e8     eboot_debug.obj
+ 0002:00000718       ??_C@_0BO@GGEA@Eboot_GetDLLInfo?$CI?$CJ?3?5?$CFs?5?$CF?9100s?$AA@ 0601f718     eboot_debug.obj
+ 0002:0000073c       ??_C@_0CC@OBDA@d?3?2sp_eboot?2eboot?2eboot_debug?4cp@ 0601f73c     eboot_debug.obj
+ 0002:00000764       ??_C@_0ID@GGGM@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN@ 0601f764     eboot_debug.obj
+ 0002:00000804       ??_C@_0CK@CMGO@Eboot_DebugOn?$CI?$CJ?3?5runtime?5trace?5i@ 0601f804     eboot_debug.obj
+ 0002:00000838       ??_C@_0BB@BIB@C?3?2EBOOT_DLL?4log?$AA@ 0601f838     eboot_debug.obj
+ 0002:0000084c       ??_C@_0CM@MGJH@Eboot_DebugOff?$CI?$CJ?3?5runtime?5trace?5@ 0601f84c     eboot_debug.obj
+ 0002:00000880       ??_C@_0BI@CENA@Eboot_DebugClear?$CI?$CJ?3?5OK?$CB?$AA@ 0601f880     eboot_debug.obj
+ 0002:0000089c       ??_C@_07MFPH@?5ERROR?3?$AA@ 0601f89c     eboot_debug.obj
+ 0002:000008a8       ??_C@_0BN@KPBP@Eboot_DebugClear?$CI?$CJ?3?5ret?$CI?$CFd?$CJ?4?$AA@ 0601f8a8     eboot_debug.obj
+ 0002:000008cc       ??_C@_0BL@JIBH@EBOOT_DLL_v?$CFd?4?$CFd?4?$CF02d?4?$CF02d?$AA@ 0601f8cc     eboot_debug.obj
+ 0002:000008ec       ??_C@_0BG@OOE@EBOOT_DLL_v?$CFd?4?$CFd?4?$CF02d?$AA@ 0601f8ec     eboot_debug.obj
+ 0002:00000908       ??_C@_0CC@GCGG@?2StringFileInfo?2?$CF04x?$CF04x?2Comment@ 0601f908     eboot_debug.obj
+ 0002:00000930       ??_C@_01PCFE@?2?$AA@       0601f930     eboot_debug.obj
+ 0002:00000934       ??_C@_0BJ@KCFH@?2VarFileInfo?2Translation?$AA@ 0601f934     eboot_debug.obj
+ 0002:00000954       ??_7?$ArrayObj@D@@6B@      0601f954     eboot_debug.obj
+ 0002:00000958       ??_C@_08MPAB@DAOLNWOD?$AA@ 0601f958     FT_Download.obj
+ 0002:00000964       ??_C@_08NCEI@DOWNLOAD?$AA@ 0601f964     FT_Download.obj
+ 0002:00000970       ??_7FTDownload@@6B@        0601f970     FT_Download.obj
+ 0002:0000097c       ??_C@_0DL@KCMO@?$FLCOM?$CFd?$FN?5Eboot?5exception?5arise?5wh@ 0601f97c     FT_Download.obj
+ 0002:000009c4       ??_C@_0CN@NPIB@?$FLCOM?$CFd?$FN?5?5SP_Download?5Close?5Handl@ 0601f9c4     FT_Download.obj
+ 0002:000009fc       ??_C@_0DL@LCBK@?$FLCOM?$CFd?$FN?5?5SP_Download?5Close?5Handl@ 0601f9fc     FT_Download.obj
+ 0002:00000a44       ??_C@_0CN@DKLA@?$FLCOM?$CFd?$FN?5?5SP_Download?5Close?5Compo@ 0601fa44     FT_Download.obj
+ 0002:00000a7c       ??_C@_0BO@BIBC@?$FLCOM?$CFd?$FN?5?5Close?5File?5Handle?5?$CFd?$AA@ 0601fa7c     FT_Download.obj
+ 0002:00000aa0       ??_C@_0BK@BIOL@?$FLCOM?$CFd?$FN?5?5Close?5COM?5Port?5?$CB?$AA@ 0601faa0     FT_Download.obj
+ 0002:00000ac0       ??_C@_0CD@NGAG@?$FLCOM?$CFd?$FN?5?5Download?5Flash?4bin?5fail@ 0601fac0     FT_Download.obj
+ 0002:00000aec       ??_C@_0BF@MLJK@?$FLCOM?$CFd?$FN?5?5Time?5Out?5?$CB?$CB?$AA@ 0601faec     FT_Download.obj
+ 0002:00000b08       ??_C@_0CF@GLIK@?$FLCOM?$CFd?$FN?5?5open_wince_usb_port?5fai@ 0601fb08     FT_Download.obj
+ 0002:00000b34       ??_C@_0CB@EPEC@?$FLCOM?$CFd?$FN?5?5open_flash_file?5fail?5?$CB?$CB@ 0601fb34     FT_Download.obj
+ 0002:00000b5c       ??_C@_0BG@OAIP@?$FLCOM?$CFd?$FN?5?5Boot?5fail?5?$CB?$CB?$AA@ 0601fb5c     FT_Download.obj
+ 0002:00000b78       ??_C@_0CB@OOMC@?$FLCOM?$CFd?$FN?5User?5press?5stop?5button?5?$CB@ 0601fb78     FT_Download.obj
+ 0002:00000ba0       ??_C@_0BP@FDJC@?$FLCOM?$CFd?$FN?5Open?5USBSerial?5Success?$AA@ 0601fba0     FT_Download.obj
+ 0002:00000bc8       ??_C@_0CI@MBAF@?$FLCOM?$CFd?$FN?5Fail?5to?5Init?5USBSerial?0?5@ 0601fbc8     FT_Download.obj
+ 0002:00000bf8       ??_C@_0BP@CHMJ@?$FLCOM?$CFd?$FN?5?5?$CLOpen?5USBSerial?4?4?4?4?4?4?$AA@ 0601fbf8     FT_Download.obj
+ 0002:00000c20       ??_7eboot_fault_exception@@6B@ 0601fc20     FT_Download.obj
+ 0002:00000c2c       ??_C@_0DJ@OPPM@?$FLCOM?$CFd?$FN?5Eboot?5exception?5arise?5wh@ 0601fc2c     FT_Download.obj
+ 0002:00000c70       ??_C@_0BO@LNKN@?$FLCOM?$CFd?$FN?5?5Create?5file?5failed?4?4?$AA@ 0601fc70     FT_Download.obj
+ 0002:00000c94       ??_C@_0DC@MAIF@?$FLCOM?$CFd?$FN?5Eboot?5exception?5arise?5?9?9@ 0601fc94     FT_Download.obj
+ 0002:00000cd0       ??_C@_0DP@DJHF@?$FLCOM?$CFd?$FN?5Eboot?5eboot_slight_excep@ 0601fcd0     FT_Download.obj
+ 0002:00000d1c       ??_C@_0CO@BOAK@?$FLCOM?$CFd?$FN?5?5Write_and_read_download@ 0601fd1c     FT_Download.obj
+ 0002:00000d54       ??_C@_0CK@JFIJ@?$FLCOM?$CFd?$FN?5?5Write_and_read_wait_pat@ 0601fd54     FT_Download.obj
+ 0002:00000d88       ??_C@_0CB@JJAC@?$FLCOM?$CFd?$FN?5?5Wait_ready_pattern?5fail@ 0601fd88     FT_Download.obj
+ 0002:00000db0       ??_C@_0BK@GNGI@?$FLCOM?$CFd?$FN?5?5BootMode?5Success?$AA@ 0601fdb0     FT_Download.obj
+ 0002:00000dd0       ??_C@_0BI@KLOA@?$FLCOM?$CFd?$FN?5?5BootMode?5Error?$AA@ 0601fdd0     FT_Download.obj
+ 0002:00000dec       ??_C@_0CC@NCMJ@?$FLCOM?$CFd?$FN?5?5Enter?5SPBootAsFTDownloa@ 0601fdec     FT_Download.obj
+ 0002:00000e14       ??_C@_0CE@FJOE@?$FLCOM?$CFd?$FN?5?5Read?5Ready?5Pattern?5Erro@ 0601fe14     FT_Download.obj
+ 0002:00000e40       ??_C@_0BE@INKP@?$FLCOM?$CFd?$FN?5?5Send?5?$CFs?5OK?$AA@ 0601fe40     FT_Download.obj
+ 0002:00000e58       ??_C@_0CE@COLB@?$FLCOM?$CFd?$FN?5?5Could?5not?5write?5?$CFs?5to?5W@ 0601fe58     FT_Download.obj
+ 0002:00000e84       ??_C@_0EJ@JAHL@?$FLCOM?$CFd?$FN?5Eboot?5exception?5arise?5?9?9@ 0601fe84     FT_Download.obj
+ 0002:00000edc       ??_C@_0CH@ICDI@?$FLCOM?$CFd?$FN?5?5Read?5WAIT?5Pattern?5ACK?5E@ 0601fedc     FT_Download.obj
+ 0002:00000f0c       ??_C@_0CE@LEKM@?$FLCOM?$CFd?$FN?5?5Write?5WAIT?5Pattern?5Erro@ 0601ff0c     FT_Download.obj
+ 0002:00000f38       ??_C@_0DP@PJJH@?$FLCOM?$CFd?$FN?5Eboot?5exception?5arise?5wh@ 0601ff38     FT_Download.obj
+ 0002:00000f84       ??_C@_0CJ@JDGD@?$FLCOM?$CFd?$FN?5Already?5used?5wce?5usb?5por@ 0601ff84     FT_Download.obj
+ 0002:00000fb8       ??_C@_0DG@JOFM@?$FLCOM?$CFd?$FN?5Try?5to?5open?5exist?5Wce?5US@ 0601ffb8     FT_Download.obj
+ 0002:00000ff8       __real@4@4005c800000000000000 0601fff8     FT_Download.obj
+ 0002:00000ffc       ??_C@_0DF@OBJ@?$FLCOM?$CFd?$FN?5?5SendImage?5WriteFile?5fai@ 0601fffc     FT_Download.obj
+ 0002:0000103c       ??_C@_0DF@MLIH@?$FLCOM?$CFd?$FN?5?5SendImage?5ReadFile2?5fai@ 0602003c     FT_Download.obj
+ 0002:0000107c       ??_C@_0DF@CIDA@?$FLCOM?$CFd?$FN?5?5SendImage?5ReadFile1?5fai@ 0602007c     FT_Download.obj
+ 0002:000010bc       ??_C@_0BP@BBP@?$FLCOM?$CFd?$FN?5?5Alloc?5buffer?5failed?$CB?$CB?$AA@ 060200bc     FT_Download.obj
+ 0002:000010e4       ??_C@_04BAK@NULL?$AA@      060200e4     Mdebug.obj
+ 0002:000010ec       ??_C@_0BN@FBOB@d?3?2sp_eboot?2eboot?2mdebug?4cpp?$AA@ 060200ec     Mdebug.obj
+ 0002:00001110       ??_C@_02DILL@?$CFs?$AA@    06020110     Mdebug.obj
+ 0002:00001114       ??_C@_06CFFB@MTRACE?$AA@   06020114     Mdebug.obj
+ 0002:0000111c       ??_7MetaTrace@@6B@         0602011c     Mdebug.obj
+ 0002:00001120       ??_C@_0CI@FOPI@?$CF02d?3?$CF02d?3?$CF02d?4?$CF03d?5?$CFs?$FL?$CFlu?$FN?$FL?$CFlu?$FN@ 06020120     Mdebug.obj
+ 0002:00001150       ??_C@_0DH@JJKN@?$CF02d?1?$CF02d?1?$CF02d?5?$CF02d?3?$CF02d?3?$CF02d?4?$CF0@ 06020150     Mdebug.obj
+ 0002:00001194       ??_C@_0L@IEKB@?$CFs?5?$CI?$CFs?3?$CFd?$CJ?$AA@ 06020194     Mdebug.obj
+ 0002:000011a4       ??_C@_06JIKH@stdout?$AA@   060201a4     Mdebug.obj
+ 0002:000011ac       ??_C@_06DCBI@stderr?$AA@   060201ac     Mdebug.obj
+ 0002:000011b4       ??_C@_05NOKM@stdin?$AA@    060201b4     Mdebug.obj
+ 0002:000011bc       ??_C@_02NGAF@wb?$AA@       060201bc     Mdebug.obj
+ 0002:000011c0       ??_C@_02JBML@?$CFc?$AA@    060201c0     Mdebug.obj
+ 0002:000011c4       ??_C@_05DLFD@?$CF02X?5?$AA@ 060201c4     Mdebug.obj
+ 0002:000011cc       ??_C@_07LPHP@?7?$CF08X?3?5?$AA@ 060201cc     Mdebug.obj
+ 0002:000011d8       ??_C@_08NHOG@TIAWLDPM?$AA@ 060201d8     MP_Download.obj
+ 0002:000011e4       ??_C@_08FLAE@MPDLWAIT?$AA@ 060201e4     MP_Download.obj
+ 0002:000011f0       ??_C@_08LBMP@NOOGLDPM?$AA@ 060201f0     MP_Download.obj
+ 0002:000011fc       ??_C@_08KNPO@MPDLGOON?$AA@ 060201fc     MP_Download.obj
+ 0002:00001208       ??_C@_0BA@DNGB@tskill?5wcescomm?$AA@ 06020208     MP_Download.obj
+ 0002:0000121c       ??_7MPDownload@@6B@        0602021c     MP_Download.obj
+ 0002:00001228       ??_C@_0CG@HPKK@Wait?5to?5connect?5with?5platform?5Fa@ 06020228     MP_Download.obj
+ 0002:00001258       ??_C@_07FMGG@FTREADY?$AA@  06020258     MP_Download.obj
+ 0002:00001264       ??_C@_0CC@IFMP@d?3?2sp_eboot?2eboot?2mp_download?4cp@ 06020264     MP_Download.obj
+ 0002:0000128c       ??_C@_0CB@DDIM@Wait?5to?5connect?5with?5platform?4?4?4@ 0602028c     MP_Download.obj
+ 0002:000012b4       ??_C@_0CI@EBAJ@?$FLCOM?$CFd?$FN?5?5Read?5GO?5ON?5Pattern?5ACK?5@ 060202b4     MP_Download.obj
+ 0002:000012e4       ??_C@_0CF@BGGF@?$FLCOM?$CFd?$FN?5?5Write?5GO?5ON?5Pattern?5Err@ 060202e4     MP_Download.obj
+ 0002:00001310       ??_C@_0CL@FJHL@?$FLCOM?$CFd?$FN?5?5Write_and_read_go_on_pa@ 06020310     MP_Download.obj
+ 0002:00001344       ??_C@_0CN@DHNC@?$FLCOM?$CFd?$FN?5?5Wait_entre_mpdl_mode_pe@ 06020344     MP_Download.obj
+ 0002:0000137c       ??_C@_0CC@KFO@?$FLCOM?$CFd?$FN?5?5Enter?5SPBootAsMLDownloa@ 0602037c     MP_Download.obj
+ 0002:000013a4       ??_C@_0DM@PLNE@?$FLCOM?$CFd?$FN?5Eboot?5exception?5arise?5?3?5@ 060203a4     MP_Download.obj
+ 0002:000013ec       ??_C@_0CE@CKHN@?$FLCOM?$CFd?$FN?5?5All?5thread?8s?5download?5O@ 060203ec     MP_Download.obj
+ 0002:00001418       ??_C@_01HMO@?$CC?$AA@      06020418     MP_Download.obj
+ 0002:0000141c       ??_C@_0EB@OCNI@SOFTWARE?2Microsoft?2Windows?2Curre@ 0602041c     MP_Download.obj
+ 0002:00001470       ??_7type_info@@6B@         06020470     MSVCRTD:ti_inst.obj
+ 0002:00001474       ??_C@_08JKC@crtdll?4c?$AA@ 06020474     MSVCRTD:crtdll.obj
+ 0002:000015f8       ??_R1A@?0A@A@type_info@@8  060205f8     MSVCRTD:ti_inst.obj
+ 0002:00001610       ??_R2type_info@@8          06020610     MSVCRTD:ti_inst.obj
+ 0002:00001618       ??_R3type_info@@8          06020618     MSVCRTD:ti_inst.obj
+ 0002:00001628       ??_R4type_info@@6B@        06020628     MSVCRTD:ti_inst.obj
+ 0002:00001858       __CT??_R0?AVexception@@@8??0exception@@QAE@ABV0@@Z12 06020858     eboot.obj
+ 0002:00001878       __CTA1?AVexception@@       06020878     eboot.obj
+ 0002:00001880       __TI1?AVexception@@        06020880     eboot.obj
+ 0002:00001980       __CT??_R0?AVeboot_slight_exception@@@8??0eboot_slight_exception@@QAE@ABV0@@Z20 06020980     eboot.obj
+ 0002:000019a0       __CTA1?AVeboot_slight_exception@@ 060209a0     eboot.obj
+ 0002:000019a8       __TI1?AVeboot_slight_exception@@ 060209a8     eboot.obj
+ 0002:00001a68       __CT??_R0?AVuser_stop@@@81 06020a68     eboot.obj
+ 0002:00001a88       __CTA1?AVuser_stop@@       06020a88     eboot.obj
+ 0002:00001a90       __TI1?AVuser_stop@@        06020a90     eboot.obj
+ 0002:00001d90       __CT??_R0?AVeboot_fault_exception@@@8??0eboot_fault_exception@@QAE@ABV0@@Z20 06020d90     FT_Download.obj
+ 0002:00001db0       __CTA1?AVeboot_fault_exception@@ 06020db0     FT_Download.obj
+ 0002:00001db8       __TI1?AVeboot_fault_exception@@ 06020db8     FT_Download.obj
+ 0003:00000000       ___xc_a                    06022000     MSVCRTD:cinitexe.obj
+ 0003:00000228       ___xc_z                    06022228     MSVCRTD:cinitexe.obj
+ 0003:0000032c       ___xi_a                    0602232c     MSVCRTD:cinitexe.obj
+ 0003:00000430       ___xi_z                    06022430     MSVCRTD:cinitexe.obj
+ 0003:00000540       ?__LINE__Var@?1??CreateEbootProcess@@YAHPAD@Z@4FA 06022540     eboot.obj
+ 0003:00000544       ?__LINE__Var@?1??SendImage@@YAHPAX0KPAH@Z@4FA 06022544     eboot.obj
+ 0003:00000548       ??_R0?AVexception@@@8      06022548     eboot.obj
+ 0003:00000564       ?__LINE__Var@?1??GetEbootComPort@@YAHAAPAXPAHHPAUDownload_Context@@@Z@4FA 06022564     eboot.obj
+ 0003:00000568       ?__LINE__Var@?1??BootMode@@YA?AW4EBOOT_RESULT@@AAPAXHW4COMM_BAUDRATE@@@Z@4FA 06022568     eboot.obj
+ 0003:00000570       ??_R0?AVeboot_slight_exception@@@8 06022570     eboot.obj
+ 0003:0000059c       ?__LINE__Var@?1??SP_BootAsMeta@@9@20@4FA 0602259c     eboot.obj
+ 0003:000005a0       ?__LINE__Var@?1??SP_BootAsFactoryNormalMode@@9@8@4FA 060225a0     eboot.obj
+ 0003:000005a4       ?__LINE__Var@?1??trace@@YAHPBDZZ@4FA 060225a4     eboot.obj
+ 0003:000005a8       ??_R0?AVuser_stop@@@8      060225a8     eboot.obj
+ 0003:000005c4       ?__LINE__Var@?1??Eboot_GetDLLInfo@@YGHPAPBD000@Z@4FA 060225c4     eboot_debug.obj
+ 0003:000005c8       ?__LINE__Var@?1??Eboot_DebugOn@@YGHXZ@4FA 060225c8     eboot_debug.obj
+ 0003:000005cc       ?__LINE__Var@?1??Eboot_DebugOff@@YGHXZ@4FA 060225cc     eboot_debug.obj
+ 0003:000005d0       ?__LINE__Var@?1??Eboot_DebugClear@@YGHXZ@4FA 060225d0     eboot_debug.obj
+ 0003:000005d4       ?_c_download_pattern@FTDownload@@1PBDB 060225d4     FT_Download.obj
+ 0003:000005d8       ?_c_download_ack_pattern@FTDownload@@1PBDB 060225d8     FT_Download.obj
+ 0003:000005dc       ?_c_ready_pattern@FTDownload@@1PBDB 060225dc     FT_Download.obj
+ 0003:000005e8       ??_R0?AVeboot_fault_exception@@@8 060225e8     FT_Download.obj
+ 0003:00000614       ?__LINE__Var@?1???0MetaTrace_Log_Sentry@@QAE@AAPAUMetaTraceHandle@@PBD1@Z@4FA 06022614     Mdebug.obj
+ 0003:00000618       ?__LINE__Var@?1???1MetaTrace_Log_Sentry@@QAE@XZ@4FA 06022618     Mdebug.obj
+ 0003:0000061c       ?_c_go_on_pattern@MPDownload@@1PBDB 0602261c     MP_Download.obj
+ 0003:00000620       ?_c_go_on_ack_pattern@MPDownload@@1PBDB 06022620     MP_Download.obj
+ 0003:00000624       ?_c_wait_pattern@MPDownload@@1PBDB 06022624     MP_Download.obj
+ 0003:00000628       ?_c_wait_ack_pattern@MPDownload@@1PBDB 06022628     MP_Download.obj
+ 0003:00000630       ?__LINE__Var@?1??WaitForPlatform@@YAHPAX@Z@4FA 06022630     MP_Download.obj
+ 0003:00000640       ??_R0?AVtype_info@@@8      06022640     MSVCRTD:ti_inst.obj
+ 0003:00000770       ?g_EBOOT_DLL_BuildDate@@3V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@A 06022770     dll_main.obj
+ 0003:00000780       ?g_EBOOT_DLL_Version@@3V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@A 06022780     dll_main.obj
+ 0003:00000790       ?g_EBOOT_DLL_ReleaseType@@3V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@A 06022790     dll_main.obj
+ 0003:000007a0       ?g_EBOOT_DLL_LoadPath@@3V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@A 060227a0     dll_main.obj
+ 0003:000007b0       ?g_EBOOT_DLL_hMODULE@@3PAUHINSTANCE__@@A 060227b0     dll_main.obj
+ 0003:00000c94       ?g_hEBOOT_DEBUG@@3PAUMetaTraceHandle@@A 06022c94     eboot_debug.obj
+ 0003:00000c98       ?g_hVIRTUAL_IO_DEBUG@@3PAUMetaTraceHandle@@A 06022c98     eboot_debug.obj
+ 0003:00134078       __adjust_fdiv              06156078     <common>
+ 0003:00134084       __pRawDllMain              06156084     <common>
+ 0003:00134090       ___onexitend               06156090     <common>
+ 0003:001340a0       ___onexitbegin             061560a0     <common>
+ 0004:00000000       __IMPORT_DESCRIPTOR_KERNEL32 06157000     kernel32:KERNEL32.dll
+ 0004:00000014       __IMPORT_DESCRIPTOR_ADVAPI32 06157014     advapi32:ADVAPI32.dll
+ 0004:00000028       __IMPORT_DESCRIPTOR_VERSION 06157028     version:VERSION.dll
+ 0004:0000003c       __IMPORT_DESCRIPTOR_MSVCP60D 0615703c     msvcprtd:MSVCP60D.dll
+ 0004:00000050       __IMPORT_DESCRIPTOR_MSVCRTD 06157050     MSVCRTD:MSVCRTD.dll
+ 0004:00000064       __NULL_IMPORT_DESCRIPTOR   06157064     kernel32:KERNEL32.dll
+ 0004:000002a0       __imp__RegQueryValueExA@24 061572a0     advapi32:ADVAPI32.dll
+ 0004:000002a4       __imp__RegCloseKey@4       061572a4     advapi32:ADVAPI32.dll
+ 0004:000002a8       __imp__RegOpenKeyExA@20    061572a8     advapi32:ADVAPI32.dll
+ 0004:000002ac       \177ADVAPI32_NULL_THUNK_DATA 061572ac     advapi32:ADVAPI32.dll
+ 0004:000002d8       __imp__ReadFile@20         061572d8     kernel32:KERNEL32.dll
+ 0004:000002dc       __imp__GetLocalTime@4      061572dc     kernel32:KERNEL32.dll
+ 0004:000002e0       __imp__CreateFileA@28      061572e0     kernel32:KERNEL32.dll
+ 0004:000002e4       __imp__Sleep@4             061572e4     kernel32:KERNEL32.dll
+ 0004:000002e8       __imp__SetCommTimeouts@8   061572e8     kernel32:KERNEL32.dll
+ 0004:000002ec       __imp__PurgeComm@8         061572ec     kernel32:KERNEL32.dll
+ 0004:000002f0       __imp__SetCommState@8      061572f0     kernel32:KERNEL32.dll
+ 0004:000002f4       __imp__GetCommState@8      061572f4     kernel32:KERNEL32.dll
+ 0004:000002f8       __imp__CloseHandle@4       061572f8     kernel32:KERNEL32.dll
+ 0004:000002fc       __imp__SetupComm@12        061572fc     kernel32:KERNEL32.dll
+ 0004:00000300       __imp__WriteFile@20        06157300     kernel32:KERNEL32.dll
+ 0004:00000304       __imp__GetLastError@0      06157304     kernel32:KERNEL32.dll
+ 0004:00000308       __imp__GetFileSize@8       06157308     kernel32:KERNEL32.dll
+ 0004:0000030c       __imp__InitializeCriticalSection@4 0615730c     kernel32:KERNEL32.dll
+ 0004:00000310       __imp__DeleteCriticalSection@4 06157310     kernel32:KERNEL32.dll
+ 0004:00000314       __imp__OutputDebugStringA@4 06157314     kernel32:KERNEL32.dll
+ 0004:00000318       __imp__GetCurrentThreadId@0 06157318     kernel32:KERNEL32.dll
+ 0004:0000031c       __imp__GetCurrentProcessId@0 0615731c     kernel32:KERNEL32.dll
+ 0004:00000320       __imp__EnterCriticalSection@4 06157320     kernel32:KERNEL32.dll
+ 0004:00000324       __imp__LeaveCriticalSection@4 06157324     kernel32:KERNEL32.dll
+ 0004:00000328       __imp__SetFilePointer@16   06157328     kernel32:KERNEL32.dll
+ 0004:0000032c       __imp__CreateProcessA@40   0615732c     kernel32:KERNEL32.dll
+ 0004:00000330       __imp__ClearCommError@12   06157330     kernel32:KERNEL32.dll
+ 0004:00000334       __imp__GetModuleFileNameA@12 06157334     kernel32:KERNEL32.dll
+ 0004:00000338       \177KERNEL32_NULL_THUNK_DATA 06157338     kernel32:KERNEL32.dll
+ 0004:00000374       __imp_?move@?$char_traits@D@std@@SAPADPADPBDI@Z 06157374     msvcprtd:MSVCP60D.dll
+ 0004:00000378       __imp_?_Xran@std@@YAXXZ    06157378     msvcprtd:MSVCP60D.dll
+ 0004:0000037c       __imp_?_Xlen@std@@YAXXZ    0615737c     msvcprtd:MSVCP60D.dll
+ 0004:00000380       __imp_?length@?$char_traits@D@std@@SAIPBD@Z 06157380     msvcprtd:MSVCP60D.dll
+ 0004:00000384       __imp_?copy@?$char_traits@D@std@@SAPADPADPBDI@Z 06157384     msvcprtd:MSVCP60D.dll
+ 0004:00000388       __imp_?assign@?$char_traits@D@std@@SAXAADABD@Z 06157388     msvcprtd:MSVCP60D.dll
+ 0004:0000038c       \177MSVCP60D_NULL_THUNK_DATA 0615738c     msvcprtd:MSVCP60D.dll
+ 0004:000003bc       __imp___vsnprintf          061573bc     MSVCRTD:MSVCRTD.dll
+ 0004:000003c0       __imp___adjust_fdiv        061573c0     MSVCRTD:MSVCRTD.dll
+ 0004:000003c4       __imp___malloc_dbg         061573c4     MSVCRTD:MSVCRTD.dll
+ 0004:000003c8       __imp___chkesp             061573c8     MSVCRTD:MSVCRTD.dll
+ 0004:000003cc       __imp__fclose              061573cc     MSVCRTD:MSVCRTD.dll
+ 0004:000003d0       __imp__sprintf             061573d0     MSVCRTD:MSVCRTD.dll
+ 0004:000003d4       __imp__localtime           061573d4     MSVCRTD:MSVCRTD.dll
+ 0004:000003d8       __imp___fstat              061573d8     MSVCRTD:MSVCRTD.dll
+ 0004:000003dc       __imp__fopen               061573dc     MSVCRTD:MSVCRTD.dll
+ 0004:000003e0       __imp____CxxFrameHandler   061573e0     MSVCRTD:MSVCRTD.dll
+ 0004:000003e4       __imp_??2@YAPAXI@Z         061573e4     MSVCRTD:MSVCRTD.dll
+ 0004:000003e8       __imp__memset              061573e8     MSVCRTD:MSVCRTD.dll
+ 0004:000003ec       __imp__malloc              061573ec     MSVCRTD:MSVCRTD.dll
+ 0004:000003f0       __imp_??0exception@@QAE@ABV0@@Z 061573f0     MSVCRTD:MSVCRTD.dll
+ 0004:000003f4       __imp_??1exception@@UAE@XZ 061573f4     MSVCRTD:MSVCRTD.dll
+ 0004:000003f8       __imp_??0exception@@QAE@ABQBD@Z 061573f8     MSVCRTD:MSVCRTD.dll
+ 0004:000003fc       __imp___CxxThrowException@8 061573fc     MSVCRTD:MSVCRTD.dll
+ 0004:00000400       __imp__memcmp              06157400     MSVCRTD:MSVCRTD.dll
+ 0004:00000404       __imp__memcpy              06157404     MSVCRTD:MSVCRTD.dll
+ 0004:00000408       __imp___fileno             06157408     MSVCRTD:MSVCRTD.dll
+ 0004:00000408       __imp__fileno              06157408     MSVCRTD:MSVCRTD.dll
+ 0004:0000040c       __imp___ftol               0615740c     MSVCRTD:MSVCRTD.dll
+ 0004:00000410       __imp__strcpy              06157410     MSVCRTD:MSVCRTD.dll
+ 0004:00000414       __imp__strncpy             06157414     MSVCRTD:MSVCRTD.dll
+ 0004:00000418       __imp__strlen              06157418     MSVCRTD:MSVCRTD.dll
+ 0004:0000041c       __imp__strrchr             0615741c     MSVCRTD:MSVCRTD.dll
+ 0004:00000420       __imp__fflush              06157420     MSVCRTD:MSVCRTD.dll
+ 0004:00000424       __imp__fprintf             06157424     MSVCRTD:MSVCRTD.dll
+ 0004:00000428       __imp___snprintf           06157428     MSVCRTD:MSVCRTD.dll
+ 0004:0000042c       __imp___iob                0615742c     MSVCRTD:MSVCRTD.dll
+ 0004:00000430       __imp__free                06157430     MSVCRTD:MSVCRTD.dll
+ 0004:00000434       __imp____dllonexit         06157434     MSVCRTD:MSVCRTD.dll
+ 0004:00000438       __imp___onexit             06157438     MSVCRTD:MSVCRTD.dll
+ 0004:0000043c       __imp_??1type_info@@UAE@XZ 0615743c     MSVCRTD:MSVCRTD.dll
+ 0004:00000440       __imp___free_dbg           06157440     MSVCRTD:MSVCRTD.dll
+ 0004:00000444       __imp___initterm           06157444     MSVCRTD:MSVCRTD.dll
+ 0004:00000448       \177MSVCRTD_NULL_THUNK_DATA 06157448     MSVCRTD:MSVCRTD.dll
+ 0004:00000490       __imp__GetFileVersionInfoA@16 06157490     version:VERSION.dll
+ 0004:00000494       __imp__GetFileVersionInfoSizeA@8 06157494     version:VERSION.dll
+ 0004:00000498       __imp__VerQueryValueA@16   06157498     version:VERSION.dll
+ 0004:0000049c       \177VERSION_NULL_THUNK_DATA 0615749c     version:VERSION.dll
+
+ entry point at        0001:0000b5c0
+

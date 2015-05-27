@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll
+END
+spmeta.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/spmeta.h
+END
+HdcpEncryption.dll
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/HdcpEncryption.dll
+END
+HdcpEncryption(BCB).lib
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/HdcpEncryption(BCB).lib
+END
+wm_meta_cct.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/wm_meta_cct.h
+END
+SPMETA_DLL.lib
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/SPMETA_DLL.lib
+END
+wm_meta_cct_6238.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/wm_meta_cct_6238.h
+END
+HdcpEncryption.lib
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/HdcpEncryption.lib
+END
+SPMETA_DLL.dll
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/wmmetadll/SPMETA_DLL.dll
+END

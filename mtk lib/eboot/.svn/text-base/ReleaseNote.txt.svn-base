@@ -1,0 +1,21 @@
+================== Eboot v3.09.03 (2009/01/19) ==================
+Bug fixes:
+ N/A
+
+New features:
+ 1. Eboot Factory Normal Mode by SP_BootAsFactoryNormalMode
+
+
+Enhancements:
+N/A
+================== Eboot v3.0836 (2008/12/01) ==================
+Bug fixes:
+ N/A
+
+New features:
+ 1. Eboot Enter SP download mode by SP_BootAsDownload
+ 2. Eboot Enter SP meta mode by SP_BootAsMeta
+ 3. Eboot download flash.bin file by SP_Download
+
+Enhancements:
+N/A

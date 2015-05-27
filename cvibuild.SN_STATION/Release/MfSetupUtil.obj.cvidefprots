@@ -1,0 +1,108 @@
+[read_item]
+Class="Function"
+Prototype="void read_item(unsigned char *strSetupFile, unsigned char *strSecName, unsigned char *strFieldName, ini_item_struct *sIniData);"
+
+[write_item]
+Class="Function"
+Prototype="void write_item(unsigned char *strSetupFile, unsigned char *strSecName, unsigned char *strFieldName, ini_item_struct *sIniData);"
+
+[read_HeadInfo]
+Class="Function"
+Prototype="void read_HeadInfo(HeadInfo_struct *ptHeadInfo);"
+
+[write_HeadInfo]
+Class="Function"
+Prototype="void write_HeadInfo(HeadInfo_struct tHeadInfo);"
+
+[read_EngineerPasswd]
+Class="Function"
+Prototype="int read_EngineerPasswd(char *strPassword);"
+
+[read_StringValueFromSetupFile]
+Class="Function"
+Prototype="void read_StringValueFromSetupFile(unsigned char *strSecName, unsigned char *strFieldName, unsigned char *strValue);"
+
+[write_StringValueToSetupFile]
+Class="Function"
+Prototype="void write_StringValueToSetupFile(unsigned char *strSecName, unsigned char *strFieldName, unsigned char *strValue);"
+
+[read_IntValueFromSetupFile]
+Class="Function"
+Prototype="int read_IntValueFromSetupFile(unsigned char *strSecName, unsigned char *strFieldName);"
+
+[write_IntValueToSetupFile]
+Class="Function"
+Prototype="void write_IntValueToSetupFile(unsigned char *strSecName, unsigned char *strFieldName, int intValue);"
+
+[read_BoolValueFromSetupFile]
+Class="Function"
+Prototype="kal_bool read_BoolValueFromSetupFile(unsigned char *strSecName, unsigned char *strFieldName);"
+
+[write_BoolValueToSetupFile]
+Class="Function"
+Prototype="void write_BoolValueToSetupFile(unsigned char *strSecName, unsigned char *strFieldName, kal_bool boolValue);"
+
+[write_EngineerPasswd]
+Class="Function"
+Prototype="int write_EngineerPasswd(char *strPassword);"
+
+[read_SP_WIFI_NVRAM_Path]
+Class="Function"
+Prototype="void read_SP_WIFI_NVRAM_Path(char *path);"
+
+[read_BaudRate]
+Class="Function"
+Prototype="UART_BAUDRATE read_BaudRate();"
+
+[write_BaudRate]
+Class="Function"
+Prototype="void write_BaudRate(UART_BAUDRATE mBaudrate);"
+
+[read_PidFilter]
+Class="Function"
+Prototype="void read_PidFilter(unsigned char *strPath);"
+
+[read_SpBromPortFilter]
+Class="Function"
+Prototype="void read_SpBromPortFilter(unsigned char *strPath);"
+
+[read_SpPreloaderPortFilter]
+Class="Function"
+Prototype="void read_SpPreloaderPortFilter(unsigned char *strPath);"
+
+[read_Is_Composite_Device_Enable]
+Class="Function"
+Prototype="kal_bool read_Is_Composite_Device_Enable();"
+
+[read_Kernel_COMPort_Filter]
+Class="Function"
+Prototype="void read_Kernel_COMPort_Filter(unsigned char *strPath);"
+
+[read_Imei_SvnPad]
+Class="Function"
+Prototype="void read_Imei_SvnPad(IMEISV_struct_T *ptSvnPad);"
+
+[write_Imei_SvnPad]
+Class="Function"
+Prototype="void write_Imei_SvnPad(IMEISV_struct_T tSvnPad);"
+
+[read_BackupFlag]
+Class="Function"
+Prototype="unsigned int read_BackupFlag();"
+
+[write_SetCleanBoot_Flag]
+Class="Function"
+Prototype="void write_SetCleanBoot_Flag();"
+
+[read_spMD_Index]
+Class="Function"
+Prototype="unsigned int read_spMD_Index();"
+
+[read_spSW_Version]
+Class="Function"
+Prototype="unsigned int read_spSW_Version();"
+
+[read_Search_Kernel_Port_Time]
+Class="Function"
+Prototype="unsigned short read_Search_Kernel_Port_Time();"
+

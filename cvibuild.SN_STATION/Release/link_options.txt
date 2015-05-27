@@ -1,0 +1,61 @@
+-nologo
+-out:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\SN_STATION.exe
+-arch:x86
+-timestamp
+-loadextmod
+-res:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\resources.res
+-entry:_CVIWinMainStartupCode@0
+-base:0x400000
+-linked:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\linkersummary.txt
+-dlldeps:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\dlldependencies.txt
+-licensing:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\linkerlicensing.txt
+-browsedeps:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\moduledependencies.txt
+-map:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\map_file.txt
+-stackreserve:1048576
+-stackcommit:4096
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\AtProcess.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\AUTH.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\ExecFunc.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\fpexec.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\MfSetupUtil.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\rs232Module.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\SCERT.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\SLA.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\SN_STATION.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\Thread.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\uipara.obj
+-in:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\cvibuild.SN_STATION\Release\wmexec.obj
+-more:c:\program files (x86)\national instruments\cvi2013\bin\msvc\cvistart.lib
+-more:c:\program files (x86)\national instruments\cvi2013\bin\msvc\cvi.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\advapi32.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\brom.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cviauto.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cviddc.lib
+-more:c:\ProgramData\National Instruments\CVI2013\bin\msvc\cvidemoa.bli
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvidotnet.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvinetstreams.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvinetv.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvintwrk.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvitdms.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\des.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\eboot\vc\Release\eboot.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\FlashtoolLib.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\gdi32.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\gpib.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\release\HdcpEncryption.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\toolslib\toolbox\msvc\inifile.obj
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\kernel32.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\META_APP.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\META_DLL.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\nivxi.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\omp.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\toolslib\custctrl\msvc\pwctrl.obj
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\SLA_Challenge.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\wmmetadll\SPMETA_DLL.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\toolslib\toolbox\msvc\toolbox.obj
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\USBSwitchDLLibrary.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\user32.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\uuid.lib
+-more:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\visa.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\winmm.lib
+-more:c:\Users\javier.gonzalez\Desktop\SN_Write_tool_src_v2.1340.00\mtk lib\vc\xboot.lib

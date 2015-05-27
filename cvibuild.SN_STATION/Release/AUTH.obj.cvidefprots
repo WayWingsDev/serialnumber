@@ -1,0 +1,20 @@
+[SPATE_AUTH_Create]
+Class="Function"
+Prototype="unsigned char SPATE_AUTH_Create();"
+
+[SPATE_AUTH_Destroy]
+Class="Function"
+Prototype="unsigned char SPATE_AUTH_Destroy();"
+
+[SPATE_AUTH_Load]
+Class="Function"
+Prototype="unsigned char SPATE_AUTH_Load(const char *auth_filepath);"
+
+[SPATE_AUTH_Unload]
+Class="Function"
+Prototype="unsigned char SPATE_AUTH_Unload();"
+
+[SPATE_Get_AuthHandle]
+Class="Function"
+Prototype="struct SP_AUTH_HANDLE *SPATE_Get_AuthHandle();"
+

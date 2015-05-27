@@ -1,0 +1,588 @@
+[GetSVNPAD]
+Class="Function"
+Prototype="IMEISV_struct_T GetSVNPAD();"
+
+[GetIsImeiCheckSum]
+Class="Function"
+Prototype="kal_bool GetIsImeiCheckSum();"
+
+[GetIsAutoCheckSum]
+Class="Function"
+Prototype="kal_bool GetIsAutoCheckSum();"
+
+[GetIsEnableMetaLog]
+Class="Function"
+Prototype="kal_bool GetIsEnableMetaLog();"
+
+[GetIsCheckFTStatus]
+Class="Function"
+Prototype="kal_bool GetIsCheckFTStatus();"
+
+[GetIsswitchtool]
+Class="Function"
+Prototype="kal_bool GetIsswitchtool();"
+
+[GetIsImeiLock]
+Class="Function"
+Prototype="kal_bool GetIsImeiLock();"
+
+[GetIsDualImei]
+Class="Function"
+Prototype="kal_bool GetIsDualImei();"
+
+[GetIsSVNPAD_Enable]
+Class="Function"
+Prototype="kal_bool GetIsSVNPAD_Enable();"
+
+[GetTargetType]
+Class="Function"
+Prototype="E_TARGET_TYPE GetTargetType();"
+
+[GetBBChip]
+Class="Function"
+Prototype="BBCHIP_TYPE GetBBChip();"
+
+[GetBaudRate]
+Class="Function"
+Prototype="UART_BAUDRATE GetBaudRate();"
+
+[GetPowerOnDelayTime]
+Class="Function"
+Prototype="int GetPowerOnDelayTime();"
+
+[GetCOMPort]
+Class="Function"
+Prototype="E_COM_NUMBER GetCOMPort();"
+
+[IsUSBCOMPort]
+Class="Function"
+Prototype="kal_bool IsUSBCOMPort();"
+
+[GetIs6276M]
+Class="Function"
+Prototype="kal_bool GetIs6276M();"
+
+[GetIsCDrom]
+Class="Function"
+Prototype="kal_bool GetIsCDrom();"
+
+[GetIsDataCall]
+Class="Function"
+Prototype="kal_bool GetIsDataCall();"
+
+[GetIsSDS]
+Class="Function"
+Prototype="kal_bool GetIsSDS();"
+
+[GetIsDataprefer]
+Class="Function"
+Prototype="kal_bool GetIsDataprefer();"
+
+[GetIsSetAMR]
+Class="Function"
+Prototype="kal_bool GetIsSetAMR();"
+
+[GetIsSet]
+Class="Function"
+Prototype="kal_bool GetIsSet();"
+
+[GetIsClear]
+Class="Function"
+Prototype="kal_bool GetIsClear();"
+
+[GetIsAMR]
+Class="Function"
+Prototype="kal_bool GetIsAMR();"
+
+[GetModemDatabasePath]
+Class="Function"
+Prototype="unsigned char *GetModemDatabasePath();"
+
+[GetModem2DatabasePath]
+Class="Function"
+Prototype="unsigned char *GetModem2DatabasePath();"
+
+[GetAPDatabasePath]
+Class="Function"
+Prototype="unsigned char *GetAPDatabasePath();"
+
+[GetAuthFilePath]
+Class="Function"
+Prototype="unsigned char *GetAuthFilePath();"
+
+[SpGetAuthFilePath]
+Class="Function"
+Prototype="unsigned char *SpGetAuthFilePath();"
+
+[SpGetSecuFilePath]
+Class="Function"
+Prototype="unsigned char *SpGetSecuFilePath();"
+
+[GetOperMode]
+Class="Function"
+Prototype="E_OPERATE_MODE GetOperMode();"
+
+[GetFuncMode]
+Class="Function"
+Prototype="E_FUNCTION_TYPE GetFuncMode();"
+
+[GetBTPowerOn]
+Class="Function"
+Prototype="kal_bool GetBTPowerOn();"
+
+[UpdateLog]
+Class="Function"
+Prototype="void UpdateLog(unsigned char *pBuf, unsigned short iStep);"
+
+[UpdateProgress]
+Class="Function"
+Prototype="void UpdateProgress();"
+
+[EnableTimer2]
+Class="Function"
+Prototype="void EnableTimer2(kal_bool bEnable);"
+
+[ClearLog]
+Class="Function"
+Prototype="void ClearLog();"
+
+[UpdateCount]
+Class="Function"
+Prototype="void UpdateCount(kal_bool bPass);"
+
+[ResetCount]
+Class="Function"
+Prototype="void ResetCount();"
+
+[GetLogData]
+Class="Function"
+Prototype="void GetLogData(Log_struct *pData);"
+
+[UpdateIndicator]
+Class="Function"
+Prototype="void UpdateIndicator(kal_bool bOK);"
+
+[ResetIndicator]
+Class="Function"
+Prototype="void ResetIndicator();"
+
+[UpdateLog_Display]
+Class="Function"
+Prototype="void UpdateLog_Display(kal_bool bDir);"
+
+[UpdateIMEI]
+Class="Function"
+Prototype="void UpdateIMEI(kal_bool bDir);"
+
+[UpdateBarCode]
+Class="Function"
+Prototype="void UpdateBarCode(kal_bool bDir);"
+
+[UpdateBT]
+Class="Function"
+Prototype="void UpdateBT(kal_bool bDir);"
+
+[UpdateWIFIMacadr]
+Class="Function"
+Prototype="void UpdateWIFIMacadr(kal_bool bDir);"
+
+[UpdateWIFIEEPROMCopy]
+Class="Function"
+Prototype="void UpdateWIFIEEPROMCopy(kal_bool bDir);"
+
+[UpdateCheckSum]
+Class="Function"
+Prototype="void UpdateCheckSum(kal_bool bDir);"
+
+[UpdateDualIMEI]
+Class="Function"
+Prototype="void UpdateDualIMEI(kal_bool bDir);"
+
+[UpdateDualIMEISame]
+Class="Function"
+Prototype="void UpdateDualIMEISame(kal_bool bDir);"
+
+[UpdateThreeIMEI]
+Class="Function"
+Prototype="void UpdateThreeIMEI(kal_bool bDir);"
+
+[UpdateFourIMEI]
+Class="Function"
+Prototype="void UpdateFourIMEI(kal_bool bDir);"
+
+[disableUSBSwitch]
+Class="Function"
+Prototype="void disableUSBSwitch();"
+
+[enableUSBSwitch]
+Class="Function"
+Prototype="void *enableUSBSwitch();"
+
+[UpdateDataCall]
+Class="Function"
+Prototype="void UpdateDataCall(kal_bool bDir);"
+
+[UpdateAMR]
+Class="Function"
+Prototype="void UpdateAMR(kal_bool bDir);"
+
+[UpdateSDS]
+Class="Function"
+Prototype="void UpdateSDS(kal_bool bDir);"
+
+[UpdateSet]
+Class="Function"
+Prototype="void UpdateSet(kal_bool bDir);"
+
+[UpdateClear]
+Class="Function"
+Prototype="void UpdateClear(kal_bool bDir);"
+
+[UpdateDataprefer]
+Class="Function"
+Prototype="void UpdateDataprefer(kal_bool bDir);"
+
+[UpdateCallprefer]
+Class="Function"
+Prototype="void UpdateCallprefer(kal_bool bDir);"
+
+[UpdateSetAMR]
+Class="Function"
+Prototype="void UpdateSetAMR(kal_bool bDir);"
+
+[UpdateClearAMR]
+Class="Function"
+Prototype="void UpdateClearAMR(kal_bool bDir);"
+
+[UpdateCOMPort]
+Class="Function"
+Prototype="void UpdateCOMPort(kal_bool bDir);"
+
+[UpdateTargetType]
+Class="Function"
+Prototype="void UpdateTargetType(kal_bool bDir);"
+
+[UpdateModemDatabasePath]
+Class="Function"
+Prototype="void UpdateModemDatabasePath(kal_bool bDir);"
+
+[UpdateModemDatabasePath_2]
+Class="Function"
+Prototype="void UpdateModemDatabasePath_2(kal_bool bDir);"
+
+[UpdateAPDatabasePath]
+Class="Function"
+Prototype="void UpdateAPDatabasePath(kal_bool bDir);"
+
+[UpdateMetaLog]
+Class="Function"
+Prototype="void UpdateMetaLog(kal_bool bDir);"
+
+[UpdateMenuBBChip]
+Class="Function"
+Prototype="void UpdateMenuBBChip(kal_bool bDir);"
+
+[UpdateMenuCom]
+Class="Function"
+Prototype="void UpdateMenuCom(kal_bool bDir, int menuItem);"
+
+[UpdateMenuBaudRate]
+Class="Function"
+Prototype="void UpdateMenuBaudRate(kal_bool bDir, int menuItem);"
+
+[UpdateMenuTarget]
+Class="Function"
+Prototype="void UpdateMenuTarget(kal_bool bDir, int menuItem);"
+
+[UpdateMenuMode]
+Class="Function"
+Prototype="void UpdateMenuMode(kal_bool bDir, int menuItem);"
+
+[UpdateMenuBTPowerOn]
+Class="Function"
+Prototype="void UpdateMenuBTPowerOn(kal_bool bDir, int menuItem);"
+
+[UpdateMenuBTChip]
+Class="Function"
+Prototype="void UpdateMenuBTChip(kal_bool bDir, int menuItem);"
+
+[UpdateMenuIMEI]
+Class="Function"
+Prototype="void UpdateMenuIMEI(kal_bool bDir);"
+
+[UpdateMenuBarCode]
+Class="Function"
+Prototype="void UpdateMenuBarCode(kal_bool bDir);"
+
+[UpdateMenuBT]
+Class="Function"
+Prototype="void UpdateMenuBT(kal_bool bDir);"
+
+[UpdateMenuWIFI]
+Class="Function"
+Prototype="void UpdateMenuWIFI(kal_bool bDir);"
+
+[UpdateMenuHDCP]
+Class="Function"
+Prototype="void UpdateMenuHDCP(kal_bool bDir);"
+
+[UpdateMenuDRM_Key_Install]
+Class="Function"
+Prototype="void UpdateMenuDRM_Key_Install(kal_bool bDir);"
+
+[UpdateMenuIMEICheckSum]
+Class="Function"
+Prototype="void UpdateMenuIMEICheckSum(kal_bool bDir);"
+
+[UpdateMenuEnMetaWithoutBattery]
+Class="Function"
+Prototype="void UpdateMenuEnMetaWithoutBattery(kal_bool bDir);"
+
+[UpdateMenuEnDatacard]
+Class="Function"
+Prototype="void UpdateMenuEnDatacard(kal_bool bDir);"
+
+[UpdateMenuSecurreUSB]
+Class="Function"
+Prototype="void UpdateMenuSecurreUSB(kal_bool bDir);"
+
+[UpdateMenuEnDualTalk]
+Class="Function"
+Prototype="void UpdateMenuEnDualTalk(kal_bool bDir);"
+
+[UpdateMenuSDS]
+Class="Function"
+Prototype="void UpdateMenuSDS(kal_bool bDir);"
+
+[UpdateMenuIMEILock]
+Class="Function"
+Prototype="void UpdateMenuIMEILock(kal_bool bDir);"
+
+[UpdateMenuDualIMEI]
+Class="Function"
+Prototype="void UpdateMenuDualIMEI(kal_bool bDir);"
+
+[UpdateMenuThreeIMEI]
+Class="Function"
+Prototype="void UpdateMenuThreeIMEI(kal_bool bDir);"
+
+[UpdateMenuFourIMEI]
+Class="Function"
+Prototype="void UpdateMenuFourIMEI(kal_bool bDir);"
+
+[UpdateMenuFTStatusCheck]
+Class="Function"
+Prototype="void UpdateMenuFTStatusCheck(kal_bool bDir);"
+
+[swap_c]
+Class="Function"
+Prototype="void swap_c(unsigned char *x, unsigned char *y);"
+
+[UpdateImeiSvnPad]
+Class="Function"
+Prototype="void UpdateImeiSvnPad(kal_bool bDir);"
+
+[IsIMEIChecked]
+Class="Function"
+Prototype="unsigned int IsIMEIChecked();"
+
+[IsBarCodeChecked]
+Class="Function"
+Prototype="unsigned int IsBarCodeChecked();"
+
+[IsBTChecked]
+Class="Function"
+Prototype="unsigned int IsBTChecked();"
+
+[IsWIFIChecked]
+Class="Function"
+Prototype="unsigned int IsWIFIChecked();"
+
+[GetUILegacyUSBautodetection]
+Class="Function"
+Prototype="void GetUILegacyUSBautodetection(kal_bool flag, unsigned int *checked);"
+
+[ContextInit]
+Class="Function"
+Prototype="void ContextInit();"
+
+[ContextDeInit]
+Class="Function"
+Prototype="void ContextDeInit();"
+
+[GetParaFromIni]
+Class="Function"
+Prototype="void GetParaFromIni();"
+
+[SaveParaToIni]
+Class="Function"
+Prototype="void SaveParaToIni();"
+
+[UpdateUIComponent]
+Class="Function"
+Prototype="void UpdateUIComponent(kal_bool bDir);"
+
+[AccompanyActionWithDualIMEI]
+Class="Function"
+Prototype="void AccompanyActionWithDualIMEI();"
+
+[AccompanyActionWithThirdIMEI]
+Class="Function"
+Prototype="void AccompanyActionWithThirdIMEI();"
+
+[AccompanyActionWithClear]
+Class="Function"
+Prototype="void AccompanyActionWithClear();"
+
+[AccompanyActionWithData]
+Class="Function"
+Prototype="void AccompanyActionWithData();"
+
+[AccompanyActionWithCall]
+Class="Function"
+Prototype="void AccompanyActionWithCall();"
+
+[AccompanyActionWithSetAMR]
+Class="Function"
+Prototype="void AccompanyActionWithSetAMR();"
+
+[AccompanyActionWithClearAMR]
+Class="Function"
+Prototype="void AccompanyActionWithClearAMR();"
+
+[AccompanyActionWithAMR]
+Class="Function"
+Prototype="void AccompanyActionWithAMR();"
+
+[AccompanyActionWithDataCall]
+Class="Function"
+Prototype="void AccompanyActionWithDataCall();"
+
+[AccompanyActionWithFourIMEI]
+Class="Function"
+Prototype="void AccompanyActionWithFourIMEI();"
+
+[AccomanyActionWithModeSel]
+Class="Function"
+Prototype="void AccomanyActionWithModeSel();"
+
+[ResultToString]
+Class="Function"
+Prototype="unsigned char *ResultToString(unsigned char MR);"
+
+[CheckIdentityPasswd]
+Class="Function"
+Prototype="kal_bool CheckIdentityPasswd(char *strPasswd);"
+
+[GetPassword]
+Class="Function"
+Prototype="void GetPassword(int hpanel, unsigned short ctrlID, char *strPasswd);"
+
+[SetPassword]
+Class="Function"
+Prototype="void SetPassword(int hpanel, unsigned short ctrlID, char *strPasswd);"
+
+[EngineerSwitchToOperator]
+Class="Function"
+Prototype="void EngineerSwitchToOperator();"
+
+[OperatorSwitchToEngineer]
+Class="Function"
+Prototype="void OperatorSwitchToEngineer();"
+
+[ConfirmNewPassword]
+Class="Function"
+Prototype="kal_bool ConfirmNewPassword(char *strNewpasswd, char *strConfpasswd);"
+
+[UpdateCheckBarCode]
+Class="Function"
+Prototype="void UpdateCheckBarCode(kal_bool bDir);"
+
+[UpdateCheckBT]
+Class="Function"
+Prototype="void UpdateCheckBT(kal_bool bDir);"
+
+[UpdateCheckWIFI]
+Class="Function"
+Prototype="void UpdateCheckWIFI(kal_bool bDir);"
+
+[UpdateHeadInfo]
+Class="Function"
+Prototype="void UpdateHeadInfo(kal_bool bDir);"
+
+[GetIMEInums]
+Class="Function"
+Prototype="int GetIMEInums();"
+
+[HighLightCurrentScanData]
+Class="Function"
+Prototype="void HighLightCurrentScanData(int controlID);"
+
+[ResetCurrentScanID]
+Class="Function"
+Prototype="void ResetCurrentScanID(int controlID);"
+
+[CheckAllScanData]
+Class="Function"
+Prototype="CheckScanData_Result_E CheckAllScanData();"
+
+[CheckCurrentScanData]
+Class="Function"
+Prototype="CheckScanData_Result_E CheckCurrentScanData(int controlID);"
+
+[CheckScanDataHead]
+Class="Function"
+Prototype="kal_bool CheckScanDataHead(const char *strScanData, const char *strHead);"
+
+[CheckBT_WIFIData]
+Class="Function"
+Prototype="kal_bool CheckBT_WIFIData(const char *strScanData);"
+
+[CheckIMEIData]
+Class="Function"
+Prototype="kal_bool CheckIMEIData(const char *strScanData);"
+
+[ResetScanItem]
+Class="Function"
+Prototype="void ResetScanItem();"
+
+[CreateScanOrder]
+Class="Function"
+Prototype="void CreateScanOrder();"
+
+[GetNextScanControlID]
+Class="Function"
+Prototype="int GetNextScanControlID(int currentID);"
+
+[GetCurrentScanData]
+Class="Function"
+Prototype="void GetCurrentScanData(int currentID, char *strScanData, char *strHead);"
+
+[GetPasswordFromCtrl]
+Class="Function"
+Prototype="void GetPasswordFromCtrl(int panelID, int currentID, char *strPassword);"
+
+[GetIMEIConfig]
+Class="Function"
+Prototype="void GetIMEIConfig();"
+
+[UpdateCheckIMEI_1]
+Class="Function"
+Prototype="void UpdateCheckIMEI_1(kal_bool bDir);"
+
+[UpdateCheckIMEI_2]
+Class="Function"
+Prototype="void UpdateCheckIMEI_2(kal_bool bDir);"
+
+[UpdateCheckIMEI_3]
+Class="Function"
+Prototype="void UpdateCheckIMEI_3(kal_bool bDir);"
+
+[UpdateCheckIMEI_4]
+Class="Function"
+Prototype="void UpdateCheckIMEI_4(kal_bool bDir);"
+
+[DimmedMenuItem]
+Class="Function"
+Prototype="void DimmedMenuItem(kal_bool bDimmed);"
+

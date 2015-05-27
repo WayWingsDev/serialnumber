@@ -1,0 +1,28 @@
+---- MetaModemHandleInit Matches (9 in 4 files) ----
+ExecFunc.c (src\exec):extern kal_bool MetaModemHandleInit(void);
+ExecFunc.c (src\exec):	//MetaModemHandleInit ();
+Fpexec.c (src\exec):extern kal_bool MetaModemHandleInit(void);
+Fpexec.c (src\exec):kal_bool MetaModemHandleInit () {
+Fpexec.c (src\exec):	MetaModemHandleInit ();  //Move here because New META DLL for different platform need different InitHandle API
+Fpexec.c (src\exec):	MetaModemHandleInit();
+map_SN_STATION.txt (cvibuild.sn_station):0042903C      MetaModemHandleInit                           fpexec.c
+Wmexec.c (src\exec):extern kal_bool MetaModemHandleInit(void);
+Wmexec.c (src\exec):		MetaModemHandleInit();
+---- WM_META_SetCleanBootFlag_Customize Matches (17 in 5 files) ----
+ExecFunc.c (src\exec):extern kal_bool WM_META_SetCleanBootFlag_Customize  ( const int meta_handle );
+ExecFunc.c (src\exec):	   if ( META_SUCCESS != WM_META_SetCleanBootFlag_Customize ( g_Meta.iMeta_handle ) )   ///// Clean boot is very Importnant for Customer.
+ExecFunc.c (src\exec):		   sprintf ( strLog, "	  Error:!!!!! Fail to Backup NVRAM and WM_META_SetCleanBootFlag_Customize()\n" );
+ExecFunc.c (src\exec):		   sprintf ( strLog, "	  OK: Backup NVRAM and WM_META_SetCleanBootFlag_Customize() \n" );
+Fpexec.c (src\exec):extern kal_bool WM_META_SetCleanBootFlag_Customize  ( const int meta_handle );
+Fpexec.c (src\exec):			if ( META_SUCCESS != WM_META_SetCleanBootFlag_Customize ( g_Meta.iMeta_handle ) )   ///// Clean boot is very Importnant for Customer.
+Fpexec.c (src\exec):				sprintf ( strLog, "    Error:!!!!! Fail to Backup NVRAM and WM_META_SetCleanBootFlag_Customize()\n" );
+Fpexec.c (src\exec):				sprintf ( strLog, "    OK: Backup NVRAM and WM_META_SetCleanBootFlag_Customize() \n" );
+map_SN_STATION.txt (cvibuild.sn_station):0042ABF5      WM_META_SetCleanBootFlag_Customize            wmexec.c
+Wmexec.c (src\exec):		if ( META_SUCCESS != WM_META_SetCleanBootFlag_Customize ( g_Meta.iMeta_handle ) )   ///// Clean boot is very Importnant for Customer.
+Wmexec.c (src\exec):			sprintf ( strLog, "    Error:!!!!! Fail to Backup NVRAM and WM_META_SetCleanBootFlag_Customize()\n" );
+Wmexec.c (src\exec):			sprintf ( strLog, "    OK: Backup NVRAM and WM_META_SetCleanBootFlag_Customize() \n" );
+Wmexec.c (src\exec):kal_bool WM_META_SetCleanBootFlag_Customize ( const int meta_handle )
+Wmexec.c (src\exec):		  if ( META_SUCCESS != WM_META_SetCleanBootFlag_Customize ( g_Meta.iMeta_handle ) )   ///// Clean boot is very Importnant for Customer.
+Wmexec.c (src\exec):			  sprintf ( strLog, "	 Error:!!!!! Fail to Backup NVRAM and WM_META_SetCleanBootFlag_Customize()\n" );
+Wmexec.c (src\exec):			  sprintf ( strLog, "	 OK: Backup NVRAM and WM_META_SetCleanBootFlag_Customize() \n" );
+Wmexec.h (src\exec):extern kal_bool WM_META_SetCleanBootFlag_Customize ( const int meta_handle );

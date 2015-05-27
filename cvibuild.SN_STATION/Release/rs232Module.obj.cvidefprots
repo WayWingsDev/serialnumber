@@ -1,0 +1,64 @@
+[ComportInit]
+Class="Function"
+Prototype="kal_bool ComportInit(E_COM_NUMBER eComPort, UART_BAUDRATE eBaudRate);"
+
+[ComportDeInit]
+Class="Function"
+Prototype="kal_bool ComportDeInit(E_COM_NUMBER eComPort, UART_BAUDRATE eBaudRate);"
+
+[WritePDU]
+Class="Function"
+Prototype="kal_bool WritePDU(E_COM_NUMBER eComPort, unsigned char *ptr, unsigned short length);"
+
+[GetDeviceData]
+Class="Function"
+Prototype="kal_bool GetDeviceData(E_COM_NUMBER eComPort);"
+
+[ReadPDU]
+Class="Function"
+Prototype="int ReadPDU(E_COM_NUMBER eComPort, unsigned char *ptr, unsigned short length);"
+
+[InitQueue]
+Class="Function"
+Prototype="kal_bool InitQueue(S_RS232_QUEUE *pQueue);"
+
+[DeInitQueue]
+Class="Function"
+Prototype="void DeInitQueue(S_RS232_QUEUE *pQueue);"
+
+[IsQueueEmpty]
+Class="Function"
+Prototype="kal_bool IsQueueEmpty(S_RS232_QUEUE *pQueue);"
+
+[IsQueueFull]
+Class="Function"
+Prototype="kal_bool IsQueueFull(S_RS232_QUEUE *pQueue);"
+
+[GetQueueLength]
+Class="Function"
+Prototype="int GetQueueLength(S_RS232_QUEUE *pQueue);"
+
+[EnQueue]
+Class="Function"
+Prototype="void EnQueue(S_RS232_QUEUE *pQueue, unsigned char *pData, unsigned int length);"
+
+[DeQueue]
+Class="Function"
+Prototype="unsigned int DeQueue(S_RS232_QUEUE *pQueue, unsigned char *pData, unsigned int length);"
+
+[GetByteQueue]
+Class="Function"
+Prototype="unsigned char GetByteQueue(S_RS232_QUEUE *pQueue);"
+
+[FlushQueue]
+Class="Function"
+Prototype="void FlushQueue(S_RS232_QUEUE *pQueue);"
+
+[GetRawData]
+Class="Function"
+Prototype="kal_bool GetRawData(unsigned char *ch);"
+
+[ClearAllBuff]
+Class="Function"
+Prototype="void ClearAllBuff(E_COM_NUMBER eComPort);"
+

@@ -1,0 +1,998 @@
+[Project Header]
+Version = 700
+Pathname = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/SN_STATION.prj"
+CVI Dir = "/c/program files/national instruments/cvi70"
+IVI Standard Root Dir = "/C/Program Files/IVI"
+VXIplug&play Framework Dir = "/C/Program Files/IVI Foundation/VISA/winnt"
+Number of Files = 62
+Target Type = "Executable"
+Flags = 16
+
+[File 0001]
+File Type = "Include"
+Res Id = 1
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/eboot/android_dl_structure.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/eboot/android_dl_s"
+Path Line0002 = "tructure.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0002]
+File Type = "CSource"
+Res Id = 2
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/at_comm/AtProcess.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/at_comm/AtProcess.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0003]
+File Type = "Include"
+Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/at_comm/AtProcess.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/at_comm/AtProcess.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0004]
+File Type = "CSource"
+Res Id = 4
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/secure/AUTH.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/secure/AUTH.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0005]
+File Type = "Include"
+Res Id = 5
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/secure/AUTH.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/secure/AUTH.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0006]
+File Type = "DLL"
+Res Id = 6
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "release/brom.dll"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/brom.dll"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0007]
+File Type = "Include"
+Res Id = 7
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/brom.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/br"
+Path Line0002 = "om.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0008]
+File Type = "Library"
+Res Id = 8
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/brom.lib"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/brom.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0009]
+File Type = "Include"
+Res Id = 9
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/com_enum.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/co"
+Path Line0002 = "m_enum.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0010]
+File Type = "Include"
+Res Id = 10
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/context.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/context.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0011]
+File Type = "Include"
+Res Id = 11
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/secure/des.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/secure/des.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0012]
+File Type = "Library"
+Res Id = 12
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/des.lib"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/des.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0013]
+File Type = "Include"
+Res Id = 13
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/DOWNLOAD.H"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/DO"
+Path Line0002 = "WNLOAD.H"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0014]
+File Type = "DLL"
+Res Id = 14
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/eboot/vc/Release/eboot.dll"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/eboot/vc/Release/e"
+Path Line0002 = "boot.dll"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0015]
+File Type = "Library"
+Res Id = 15
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/eboot/vc/Release/eboot.lib"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/eboot/vc/Release/e"
+Path Line0002 = "boot.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0016]
+File Type = "CSource"
+Res Id = 16
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/ExecFunc.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/ExecFunc.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0017]
+File Type = "Include"
+Res Id = 17
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/Execfunc.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/Execfunc.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0018]
+File Type = "Include"
+Res Id = 18
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/misc/flashtool.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/misc/flashtool.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0019]
+File Type = "Include"
+Res Id = 19
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/flashtool_handle.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/fl"
+Path Line0002 = "ashtool_handle.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0020]
+File Type = "Library"
+Res Id = 20
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/FlashtoolLib.lib"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/FlashtoolLib.li"
+Path Line0002 = "b"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0021]
+File Type = "CSource"
+Res Id = 21
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/fpexec.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/fpexec.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0022]
+File Type = "Include"
+Res Id = 22
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/fpexec.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/fpexec.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0023]
+File Type = "Include"
+Res Id = 23
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/misc/general.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/misc/general.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0024]
+File Type = "Library"
+Res Id = 24
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "release/HdcpEncryption.lib"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/HdcpEncryption.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0025]
+File Type = "Function Panel"
+Res Id = 25
+Path Is Rel = True
+Path Rel To = "CVI"
+Path Rel Path = "toolslib/toolbox/inifile.fp"
+Path = "/c/program files/national instruments/cvi70/toolslib/toolbox/inifile.fp"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0026]
+File Type = "Include"
+Res Id = 26
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/eboot/interface.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/eboot/interface.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0027]
+File Type = "Include"
+Res Id = 27
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/misc/mem_mt6205.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/misc/mem_mt6205.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0028]
+File Type = "Include"
+Res Id = 28
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/META dll/meta.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/META dll/me"
+Path Line0002 = "ta.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0029]
+File Type = "Library"
+Res Id = 29
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/META_APP.lib"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/META_APP.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0030]
+File Type = "Library"
+Res Id = 30
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/META_DLL.lib"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/META_DLL.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0031]
+File Type = "Include"
+Res Id = 31
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/Export/METAAPP.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/Export/META"
+Path Line0002 = "APP.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0032]
+File Type = "CSource"
+Res Id = 32
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/mf_Setup/MfSetupUtil.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/mf_Setup/MfSetupUtil.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0033]
+File Type = "Include"
+Res Id = 33
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/mf_Setup/MfSetupUtil.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/mf_Setup/MfSetupUtil.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0034]
+File Type = "Include"
+Res Id = 34
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/mtk_mcu.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/mt"
+Path Line0002 = "k_mcu.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0035]
+File Type = "Include"
+Res Id = 35
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/mtk_resource.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/mt"
+Path Line0002 = "k_resource.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0036]
+File Type = "Include"
+Res Id = 36
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/mtk_status.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/mt"
+Path Line0002 = "k_status.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0037]
+File Type = "Function Panel"
+Res Id = 37
+Path Is Rel = True
+Path Rel To = "CVI"
+Path Rel Path = "toolslib/custctrl/pwctrl.fp"
+Path = "/c/program files/national instruments/cvi70/toolslib/custctrl/pwctrl.fp"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0038]
+File Type = "CSource"
+Res Id = 38
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/at_comm/rs232Module.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/at_comm/rs232Module.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0039]
+File Type = "Include"
+Res Id = 39
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/at_comm/rs232Module.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/at_comm/rs232Module.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0040]
+File Type = "CSource"
+Res Id = 40
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/secure/SCERT.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/secure/SCERT.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0041]
+File Type = "Include"
+Res Id = 41
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/secure/SCERT.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/secure/SCERT.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0042]
+File Type = "CSource"
+Res Id = 42
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/misc/SLA.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/misc/SLA.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0043]
+File Type = "Include"
+Res Id = 43
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/misc/SLA.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/misc/SLA.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0044]
+File Type = "Include"
+Res Id = 44
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/SLA_Challenge.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/SL"
+Path Line0002 = "A_Challenge.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0045]
+File Type = "Library"
+Res Id = 45
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/SLA_Challenge.lib"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/SLA_Challenge.l"
+Path Line0002 = "ib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0046]
+File Type = "CSource"
+Res Id = 46
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/SN_STATION.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/SN_STATION.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0047]
+File Type = "Include"
+Res Id = 47
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "res/SN_STATION.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/res/SN_STATION.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0048]
+File Type = "User Interface Resource"
+Res Id = 48
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "res/SN_STATION.uir"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/res/SN_STATION.uir"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
+
+[File 0049]
+File Type = "Include"
+Res Id = 49
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/secure/sp_brom.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/secure/sp_brom.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0050]
+File Type = "Include"
+Res Id = 50
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/wmmetadll/spmeta.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/wmmetadll/spmeta.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0051]
+File Type = "Library"
+Res Id = 51
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/wmmetadll/SPMETA_DLL.lib"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/wmmetadll/SPMETA_D"
+Path Line0002 = "LL.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0052]
+File Type = "CSource"
+Res Id = 52
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/Thread.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/Thread.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0053]
+File Type = "Include"
+Res Id = 53
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/Thread.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/Thread.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0054]
+File Type = "CSource"
+Res Id = 54
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/display_Log/uipara.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/display_Log/uipara.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0055]
+File Type = "Include"
+Res Id = 55
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/display_Log/uipara.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/display_Log/uipara.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0056]
+File Type = "Include"
+Res Id = 56
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/eboot/USBFinder.H"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/eboot/USBFinder.H"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0057]
+File Type = "Include"
+Res Id = 57
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/USB Switching/USBSwitchDLLibrary.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/USB Switchi"
+Path Line0002 = "ng/USBSwitchDLLibrary.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0058]
+File Type = "Library"
+Res Id = 58
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/USBSwitchDLLibrary.lib"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/USBSwitchDLLibr"
+Path Line0002 = "ary.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0059]
+File Type = "CSource"
+Res Id = 59
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/wmexec.c"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/wmexec.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0060]
+File Type = "Include"
+Res Id = 60
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "src/exec/wmexec.h"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/exec/wmexec.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0061]
+File Type = "Include"
+Res Id = 61
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/header/BROM dll/xboot.h"
+Path Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll/xb"
+Path Line0002 = "oot.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0062]
+File Type = "Library"
+Res Id = 62
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mtk lib/vc/xboot.lib"
+Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/xboot.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[Folders]
+Folder 0 = "Instrument Files"
+Folder 1 = "Source Files"
+Folder 2 = "User Interface Files"
+Folder 3 = "Include Files"
+
+[Compiler Options]
+Default Calling Convention = "stdcall"
+Require Prototypes = True
+Require Return Values = True
+Enable Pointer Mismatch Warning = False
+Enable Unreachable Code Warning = False
+Enable Unreferenced Identifiers Warning = False
+Enable Assignment In Conditional Warning = False
+O Option Compatible With 5.0 = False
+Uninitialized Locals Compile Warning = "Conservative"
+
+[Run Options]
+Stack Size = 250000
+Image Base Address = 4194304
+
+[Compiler Defines]
+Compiler Defines = "/DWIN32_LEAN_AND_MEAN"
+
+[Include Paths]
+Include Path 1 Is Rel = True
+Include Path 1 Rel To = "Project"
+Include Path 1 Rel Path = "mtk lib/wmmetadll"
+Include Path 1 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/wmmetadll"
+Include Path 2 Is Rel = True
+Include Path 2 Rel To = "CVI"
+Include Path 2 Rel Path = "sdk/include"
+Include Path 2 = "/c/program files/national instruments/cvi70/sdk/include"
+Include Path 3 Is Rel = True
+Include Path 3 Rel To = "Project"
+Include Path 3 Rel Path = "mtk lib/header/META dll"
+Include Path 3 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/META dll"
+Include Path 4 Is Rel = True
+Include Path 4 Rel To = "Project"
+Include Path 4 Rel Path = "mtk lib/header/Export"
+Include Path 4 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/Export"
+Include Path 5 Is Rel = True
+Include Path 5 Rel To = "Project"
+Include Path 5 Rel Path = "mtk lib/header/BROM dll"
+Include Path 5 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/header/BROM dll"
+Include Path 6 Is Rel = True
+Include Path 6 Rel To = "Project"
+Include Path 6 Rel Path = "res"
+Include Path 6 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/res"
+Include Path 7 Is Rel = True
+Include Path 7 Rel To = "Project"
+Include Path 7 Rel Path = "src/misc"
+Include Path 7 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/src/misc"
+
+[Create Executable]
+Executable File_Debug Is Rel = True
+Executable File_Debug Rel To = "Project"
+Executable File_Debug Rel Path = "debug/SN_STATION_dbg.exe"
+Executable File_Debug = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/debug/SN_STATION_dbg.exe"
+Executable File_Release Is Rel = True
+Executable File_Release Rel To = "Project"
+Executable File_Release Rel Path = "release/SN_STATION.exe"
+Executable File_Release = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/SN_STATION.exe"
+Icon File Is Rel = True
+Icon File Rel To = "Project"
+Icon File Rel Path = "res/SN_GUI.ico"
+Icon File = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/res/SN_GUI.ico"
+Application Title = ""
+Numeric File Version = "1,0,0,0"
+Numeric Prod Version = "1,0,0,0"
+Comments = ""
+Company Name = "MediaTek"
+File Description = ""
+File Version = "1.0"
+Internal Name = "SN Writer Tool"
+Legal Copyright = "Copyright MediaTek, 2009"
+Legal Trademarks = ""
+Original Filename = "SN_STATION.exe"
+Private Build = ""
+Product Name = "SN Writer Tool"
+Product Version = "1.0"
+Special Build = ""
+DLL Exports = "Include File Symbols"
+DLL Import Library Choice = "Gen Lib For Current Mode"
+Use IVI Subdirectories for Import Libraries = False
+Use VXIPNP Subdirectories for Import Libraries = False
+Use Dflt Import Lib Base Name = True
+Where to Copy DLL = "Do not copy"
+Add Type Lib To DLL = False
+Include Type Lib Help Links = False
+Type Lib FP File Is Rel = False
+Type Lib FP File = ""
+Type Lib Guid = ""
+Runtime Support = "Full Runtime Support"
+Instrument Driver Support Only = False
+Embed Project .UIRs = True
+Generate Map File = True
+
+[External Compiler Support]
+UIR Callbacks File Option = 0
+Using LoadExternalModule = False
+Create Project Symbols File = True
+UIR Callbacks Obj File Is Rel = False
+UIR Callbacks Obj File = ""
+Project Symbols H File Is Rel = False
+Project Symbols H File = ""
+Project Symbols Obj File Is Rel = False
+Project Symbols Obj File = ""
+
+[Distribution Kit]
+Distribution Kit GUID = "{0EEBC2F2-7436-4024-8E3D-FE33041C0AF4}"
+Installation Directory = "MTK_SN_Write_tool"
+Installation Destination = 4
+Install Run-Time Engine = True
+Install RTE Privately = False
+Install Instrsup = False
+Install Instrsup Privately = False
+Install CVI_LVRT = False
+Install CVI_LVRT Privately = False
+Install Low-Level Support Driver = False
+Install ActiveX Container = False
+Media Size = 3
+kBytes Reserved on First Disk = 0
+Target Path Is Rel = False
+Target Path = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_exe_v2.1340.00"
+Language = "English"
+Core Group Index = 1
+DLL Group Index = 3
+Project File 0001 Is Rel = True
+Project File 0001 Rel To = "Project"
+Project File 0001 Rel Path = "release/SN_STATION.exe"
+Project File 0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/SN_STATION.exe"
+Redistribute DataSocket = 0
+Redistribute NIReports = 0
+Redistribute CW3DGraph = 0
+Use Custom Script = False
+Run Executable After Setup Group Index = -1
+Run Executable After Setup File Index = -1
+Use Default Program Group Name = False
+Program Group Name = "MTK_SN_Write"
+Use Default Installation Name = False
+Installation Name = "MTK_SN_Write"
+
+[Distribution Kit File Group 001]
+Group Name = "SN_STATION Files"
+Destination Directory = "Application"
+Use Relative Path = False
+Create Shortcuts = 5
+Install Icons = True
+Distribute Multiple Objects = False
+Replace Mode = "If Newer"
+Register As ActiveX Servers = False
+File 0001 Is Rel = True
+File 0001 Rel To = "Project"
+File 0001 Rel Path = "release/AP"
+File 0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/AP"
+File 0002 Is Rel = True
+File 0002 Rel To = "Project"
+File 0002 Rel Path = "release/BP"
+File 0002 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/BP"
+File 0003 Is Rel = True
+File 0003 Rel To = "Project"
+File 0003 Rel Path = "release/des.dll"
+File 0003 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/des.dll"
+File 0004 Is Rel = True
+File 0004 Rel To = "Project"
+File 0004 Rel Path = "mtk lib/eboot/vc/Release/eboot.dll"
+File 0004 Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/eboot/vc/Release/e"
+File 0004 Line0002 = "boot.dll"
+File 0005 Is Rel = True
+File 0005 Rel To = "Project"
+File 0005 Rel Path = "mtk lib/vc/SLA_Challenge.dll"
+File 0005 Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/SLA_Challenge.d"
+File 0005 Line0002 = "ll"
+File 0006 Is Rel = True
+File 0006 Rel To = "Project"
+File 0006 Rel Path = "mtk lib/vc/USBSwitchDLLibrary.dll"
+File 0006 Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/USBSwitchDLLibr"
+File 0006 Line0002 = "ary.dll"
+File 0007 Is Rel = True
+File 0007 Rel To = "Project"
+File 0007 Rel Path = "release/FlashToolLib.dll"
+File 0007 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/FlashToolLib.dll"
+File 0008 Is Rel = True
+File 0008 Rel To = "Project"
+File 0008 Rel Path = "release/HdcpEncryption.dll"
+File 0008 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/HdcpEncryption.dll"
+File 0009 Is Rel = True
+File 0009 Rel To = "Project"
+File 0009 Rel Path = "release/HdcpEncryption.lib"
+File 0009 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/HdcpEncryption.lib"
+File 0010 Is Rel = True
+File 0010 Rel To = "Project"
+File 0010 Rel Path = "release/META_APP.dll"
+File 0010 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/META_APP.dll"
+File 0011 Is Rel = True
+File 0011 Rel To = "Project"
+File 0011 Rel Path = "release/META_DLL.dll"
+File 0011 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/META_DLL.dll"
+File 0012 Is Rel = True
+File 0012 Rel To = "Project"
+File 0012 Rel Path = "release/SN_SETUP.txt"
+File 0012 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/SN_SETUP.txt"
+File 0013 Is Rel = True
+File 0013 Rel To = "Project"
+File 0013 Rel Path = "release/SN_STATION.exe"
+File 0013 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/SN_STATION.exe"
+File 0014 Is Rel = True
+File 0014 Rel To = "Project"
+File 0014 Rel Path = "release/SPMETA_DLL.dll"
+File 0014 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/SPMETA_DLL.dll"
+File 0015 Is Rel = True
+File 0015 Rel To = "Project"
+File 0015 Rel Path = "release/USBCOMFinder.dll"
+File 0015 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/USBCOMFinder.dll"
+File 0016 Is Rel = True
+File 0016 Rel To = "Project"
+File 0016 Rel Path = "release/USBSwitchTool.exe"
+File 0016 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/USBSwitchTool.exe"
+File 0017 Is Rel = True
+File 0017 Rel To = "Project"
+File 0017 Rel Path = "release/USBSwitchTool.ini"
+File 0017 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/USBSwitchTool.ini"
+File 0018 Is Rel = True
+File 0018 Rel To = "Project"
+File 0018 Rel Path = "mtk lib/vc/xboot.dll"
+File 0018 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/mtk lib/vc/xboot.dll"
+File 0019 Is Rel = True
+File 0019 Rel To = "Project"
+File 0019 Rel Path = "release/brom.dll"
+File 0019 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/brom.dll"
+File 0020 Is Rel = True
+File 0020 Rel To = "Project"
+File 0020 Rel Path = "release/bromapi.dll"
+File 0020 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/bromapi.dll"
+File 0021 Is Rel = True
+File 0021 Rel To = "Project"
+File 0021 Rel Path = "release/libeay32.dll"
+File 0021 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/libeay32.dll"
+File 0022 Is Rel = True
+File 0022 Rel To = "Project"
+File 0022 Rel Path = "release/SNDATA"
+File 0022 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/release/SNDATA"
+File 0023 Is Rel = True
+File 0023 Rel To = "Project"
+File 0023 Rel Path = "vs2008/msvcm90.dll"
+File 0023 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/vs2008/msvcm90.dll"
+File 0024 Is Rel = True
+File 0024 Rel To = "Project"
+File 0024 Rel Path = "vs2008/msvcp90.dll"
+File 0024 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/vs2008/msvcp90.dll"
+File 0025 Is Rel = True
+File 0025 Rel To = "Project"
+File 0025 Rel Path = "vs2008/msvcr90.dll"
+File 0025 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/vs2008/msvcr90.dll"
+File 0026 Is Rel = True
+File 0026 Rel To = "Project"
+File 0026 Rel Path = "vs2008/Microsoft.VC90.CRT.manifest"
+File 0026 Line0001 = "/e/MTK_Tool/SN_Tool/1340/SN_Write_tool_src_v2.1340.00/vs2008/Microsoft.VC90.CRT."
+File 0026 Line0002 = "manifest"
+
+[Distribution Kit Hardware Config]
+Include Hardware Config File = 0
+
+[ActiveX Server Options]
+Specification File Is Rel = False
+Specification File = ""
+Source File Is Rel = False
+Source File = ""
+Include File Is Rel = False
+Include File = ""
+IDL File Is Rel = False
+IDL File = ""
+Register ActiveX Server = False
+

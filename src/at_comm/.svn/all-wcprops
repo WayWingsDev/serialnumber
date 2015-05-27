@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/src/at_comm
+END
+rs232Module.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/src/at_comm/rs232Module.c
+END
+AtProcess.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/src/at_comm/AtProcess.c
+END
+rs232Module.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/src/at_comm/rs232Module.h
+END
+AtProcess.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/src/at_comm/AtProcess.h
+END

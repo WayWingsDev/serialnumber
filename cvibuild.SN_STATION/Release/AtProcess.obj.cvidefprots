@@ -1,0 +1,164 @@
+[ATParseThread]
+Class="Function"
+Prototype="int ATParseThread(void *pParaData);"
+
+[ATParseThread2]
+Class="Function"
+Prototype="int ATParseThread2(void *pParaData);"
+
+[ActiveThread_Exec]
+Class="Function"
+Prototype="void ActiveThread_Exec(void (*func)(void) __attribute__((stdcall)));"
+
+[ActiveThread_Exec2]
+Class="Function"
+Prototype="void ActiveThread_Exec2(void (*func)(void) __attribute__((stdcall)));"
+
+[SetATRequest]
+Class="Function"
+Prototype="void SetATRequest(unsigned char *strATCmd, unsigned char *strExpectedResult, int iTimeOut);"
+
+[GetATResult]
+Class="Function"
+Prototype="S_AT_RESULT GetATResult();"
+
+[GetWriteEvent]
+Class="Function"
+Prototype="HANDLE GetWriteEvent();"
+
+[GetReadEvent]
+Class="Function"
+Prototype="HANDLE GetReadEvent();"
+
+[GetInProcessEvent]
+Class="Function"
+Prototype="HANDLE GetInProcessEvent(unsigned char i);"
+
+[COMContextInit]
+Class="Function"
+Prototype="kal_bool COMContextInit(E_COM_NUMBER eComPort, UART_BAUDRATE eBaudRate);"
+
+[COMContextDeInit]
+Class="Function"
+Prototype="kal_bool COMContextDeInit(E_COM_NUMBER eComPort, UART_BAUDRATE eBaudRate);"
+
+[SetCbRecArg]
+Class="Function"
+Prototype="void SetCbRecArg(E_COM_NUMBER eCom, unsigned char *pPDU, unsigned short length);"
+
+[SetCbGetPduArg]
+Class="Function"
+Prototype="void SetCbGetPduArg(unsigned char *pPDUBuf, E_AT_RSP_STATUS *pState, unsigned short nLF);"
+
+[WritePDU_Exec]
+Class="Function"
+Prototype="void WritePDU_Exec();"
+
+[GetDeviceData_Exec]
+Class="Function"
+Prototype="void GetDeviceData_Exec();"
+
+[GetPDUToBuf_Exec]
+Class="Function"
+Prototype="void GetPDUToBuf_Exec();"
+
+[SetTimeOutFlag]
+Class="Function"
+Prototype="void SetTimeOutFlag(kal_bool bFlag);"
+
+[GetTimeOutFlag]
+Class="Function"
+Prototype="kal_bool GetTimeOutFlag();"
+
+[WriteCommand]
+Class="Function"
+Prototype="kal_bool WriteCommand(E_COM_NUMBER eComPort, S_AT_REQUEST tRequest, S_AT_RESULT *ptResult);"
+
+[SkipComma]
+Class="Function"
+Prototype="kal_bool SkipComma(char *ptr, int *ri, int size);"
+
+[IsUnsolicited]
+Class="Function"
+Prototype="kal_bool IsUnsolicited(unsigned char *cmd, ATParamElem *lst);"
+
+[IsNumber]
+Class="Function"
+Prototype="kal_bool IsNumber(char *ptr);"
+
+[GetParam]
+Class="Function"
+Prototype="unsigned char GetParam(char *ptr, ATParamElem *elem, unsigned char isString);"
+
+[GetPDUToBuf]
+Class="Function"
+Prototype="kal_bool GetPDUToBuf(unsigned char *pPDUBuf, E_AT_RESULT_TYPE *pState, unsigned short nLF);"
+
+[AnalyingRespString]
+Class="Function"
+Prototype="kal_bool AnalyingRespString(S_AT_RESULT *ptResult);"
+
+[GetStringToBuf]
+Class="Function"
+Prototype="kal_bool GetStringToBuf(unsigned char *pSrc, unsigned char *ptr, int *wi, int *readIndex, const int size);"
+
+[GetRespContext]
+Class="Function"
+Prototype="kal_bool GetRespContext(S_AT_RESULT *ptResult, unsigned char *pContext, int *len);"
+
+[ParseAtResult]
+Class="Function"
+Prototype="kal_bool ParseAtResult(E_COM_NUMBER eComPort, S_AT_RESULT *ptResult, unsigned short nLF);"
+
+[AT_Preset]
+Class="Function"
+Prototype="kal_bool AT_Preset(E_COM_NUMBER eComPort, unsigned short iTimeOut);"
+
+[WriteBarcodeATMode]
+Class="Function"
+Prototype="kal_bool WriteBarcodeATMode(E_COM_NUMBER eComPort, unsigned char *pBarcode);"
+
+[SDSATMode]
+Class="Function"
+Prototype="kal_bool SDSATMode(E_COM_NUMBER eComPort);"
+
+[ReadBarcodeATMode]
+Class="Function"
+Prototype="kal_bool ReadBarcodeATMode(E_COM_NUMBER eComPort, unsigned char *pBarcode, unsigned int *len);"
+
+[WriteDataCallATMode]
+Class="Function"
+Prototype="kal_bool WriteDataCallATMode(E_COM_NUMBER eComPort, unsigned short id);"
+
+[WriteIMEIATMode]
+Class="Function"
+Prototype="kal_bool WriteIMEIATMode(E_COM_NUMBER eComPort, IMEISV_struct_T *pIMEI, unsigned short id, kal_bool bSVN);"
+
+[ReadIMEIATMode]
+Class="Function"
+Prototype="kal_bool ReadIMEIATMode(E_COM_NUMBER eComPort, IMEISV_struct_T *pIMEI, unsigned short id);"
+
+[WriteIMEIATMode_r]
+Class="Function"
+Prototype="kal_bool WriteIMEIATMode_r(E_COM_NUMBER eComPort, IMEISV_struct_T *pIMEI, unsigned short id, kal_bool bSVN);"
+
+[WriteBarcodeATMode_r]
+Class="Function"
+Prototype="kal_bool WriteBarcodeATMode_r(E_COM_NUMBER eComPort, unsigned char *pBarcode);"
+
+[SDSATMode_r]
+Class="Function"
+Prototype="kal_bool SDSATMode_r(E_COM_NUMBER eComPort);"
+
+[AT_Preset_rr]
+Class="Function"
+Prototype="kal_bool AT_Preset_rr(E_COM_NUMBER eComPort, unsigned short iTimeOut);"
+
+[AT_Preset_r]
+Class="Function"
+Prototype="kal_bool AT_Preset_r(E_COM_NUMBER eComPort, unsigned short iTimeOut);"
+
+[WriteCDROMATMode]
+Class="Function"
+Prototype="kal_bool WriteCDROMATMode(E_COM_NUMBER eComPort, unsigned char id);"
+

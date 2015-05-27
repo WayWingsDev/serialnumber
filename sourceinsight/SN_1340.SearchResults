@@ -1,0 +1,12 @@
+---- CheckIMEIData Matches (11 in 4 files) ----
+map_SN_STATION.txt (cvibuild.sn_station):0043239B      CheckIMEIData                                 uipara.c
+map_SN_STATION_dbg.txt (cvibuild.sn_station):00480E86      CheckIMEIData                                 uipara.c
+Uipara.c (src\display_log):				            if((CheckScanDataHead(strScanData, strHead) != 0) || CheckIMEIData(strScanData) == KAL_FALSE)
+Uipara.c (src\display_log):                            if(CheckIMEIData(strScanData) == KAL_TRUE)
+Uipara.c (src\display_log):				   if(CheckIMEIData(imei[0]) == KAL_TRUE)
+Uipara.c (src\display_log):				   if(CheckIMEIData(imei[1]) == KAL_FALSE)
+Uipara.c (src\display_log):				   if(CheckIMEIData(imei[2]) == KAL_FALSE)
+Uipara.c (src\display_log):				      if((CheckScanDataHead(imei[3], g_HeadInfo.IMEI_4) != 0) || CheckIMEIData(imei[3]) == KAL_FALSE)
+Uipara.c (src\display_log):				   if(CheckIMEIData(imei[3]) == KAL_FALSE)
+Uipara.c (src\display_log):kal_bool CheckIMEIData(const kal_char *strScanData)
+Uipara.h (src\display_log):extern kal_bool CheckIMEIData(const kal_char *strScanData);

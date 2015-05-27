@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/eboot
+END
+ReleaseNote.txt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/eboot/ReleaseNote.txt
+END
+android_dl_structure.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/eboot/android_dl_structure.h
+END
+interface.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/eboot/interface.h
+END
+USBFinder.H
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/eboot/USBFinder.H
+END
+eboot.lib
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/eboot/eboot.lib
+END

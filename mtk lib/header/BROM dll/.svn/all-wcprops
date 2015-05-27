@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll
+END
+vssver.scc
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/vssver.scc
+END
+rom_setting.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/rom_setting.h
+END
+xboot.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/xboot.h
+END
+mtk_status.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/mtk_status.h
+END
+brom.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/brom.h
+END
+mtk_mcu.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/mtk_mcu.h
+END
+SLA_Challenge.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/SLA_Challenge.h
+END
+com_enum.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/com_enum.h
+END
+mtk_resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/mtk_resource.h
+END
+flashtool_handle.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/flashtool_handle.h
+END
+DOWNLOAD.H
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/DOWNLOAD.H
+END
+external_memory_setting.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/mtk%20lib/header/BROM%20dll/external_memory_setting.h
+END

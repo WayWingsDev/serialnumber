@@ -1,0 +1,978 @@
+
+#include "brom.h"
+#include "interface.h"
+
+#include <userint.h>
+#include <utility.h>
+
+#include "context.h"
+
+#include "SLA.h"
+#include "thread.h"
+
+#include "execfunc.h"
+#include "uipara.h"
+
+#include "fpexec.h"  
+
+extern MetaCommon_struct g_Meta;
+extern COMM_BAUDRATE BaudMap [];
+
+extern E_INPUTBOX_STATUS InputBoxPopup (kal_uint8* strTitle, kal_uint8* strText, kal_int8* buffer, kal_uint16 iMaxLength );
+static MetaModem_struct tMetaModem;  
+static MetaAP_struct tMeta6516Modem;
+
+static kal_uint8 strLog [1024];
+
+//-------------------------------------------------------------------------
+kal_bool MetaModemHandleInit () {
+
+	if ( METAAPP_GetAvailableHandle ( &g_Meta.iMeta_handle) ){
+	
+		MessagePopup ("WARNING", "Get Meta handle fail!");
+		return KAL_TRUE;
+	} 
+	
+
+	if ( METAAPP_Init( g_Meta.iMeta_handle ) ){
+
+		MessagePopup ("WARNING", "Init Meta handle fail!");
+		return KAL_TRUE;
+	};
+	
+	return KAL_FALSE;
+
+}
+
+void MetaModemHandleDeInit () {
+	
+	METAAPP_DeInit ( g_Meta.iMeta_handle );
+}
+
+
+void ResetNvramUpdateFlag ( void )
+{
+	g_Meta.bIsDatabaseInitialized [0] = KAL_FALSE;  
+}
+
+//--------------------------------------------------------------------------
+kal_bool NvramDatabaseInit () {
+
+	kal_uint32 db;
+	if ( META_NVRAM_Init_r ( g_Meta.iMeta_handle, GetModemDatabasePath(), &db)){
+
+		MessagePopup ("WARNING", "Initial Database fail!, Please reselect a database.");
+		return KAL_TRUE;
+	}
+
+	g_Meta.bIsDatabaseInitialized [0] = KAL_TRUE;  
+
+	return KAL_FALSE;
+}
+//--------------------------------------------------------------------------
+kal_bool IsNvramDatabaseInit ()
+{
+
+	extern int Modem_Database_Select_Click_Shell ( void );
+	
+	if ( KAL_FALSE == g_Meta.bIsDatabaseInitialized [0] ) {
+
+		if ( NvramDatabaseInit () )
+		{
+			sprintf ( strLog, ">>Step: Reselect database and start to initiaize.\n");
+			UpdateLog ( strLog, 0);
+			Modem_Database_Select_Click_Shell ();
+			return NvramDatabaseInit();
+		}	
+		
+	}
+	return KAL_FALSE;
+}
+
+//---------------------------------------------------------------------
+kal_int32 CVICALLBACK EdgeCardThread ( void *pParaData )
+{ 
+    BOOL fFreeResult, fRunTimeLinkSuccess = FALSE; 
+	HANDLE *hCOM = pParaData;
+	HINSTANCE g_hDLL;
+	HINSTANCE hinstLib;
+	int ( *mio_pull ) ( HANDLE handle, int which, int up );
+	HANDLE ( *mio_open ) ( void );
+	void ( *mio_close )( HANDLE handle );
+	
+    // Get a handle to the DLL module. 
+    hinstLib = LoadLibrary( "miodll" ); 
+    // If the handle is valid, try to get the function address. 
+    if ( hinstLib != NULL ) 
+    { 
+		   mio_pull = ( int ( * )( HANDLE, int, int ) ) GetProcAddress ( hinstLib, "mio_pull" );            
+           mio_pull ( *hCOM, 0, 1 );   //reset
+           Delay ( 0.1 );
+           mio_pull( *hCOM, 0, 0 ); 
+           Delay ( 0.1 );      
+		   mio_pull ( *hCOM, 1, 1 );
+		  // Free the DLL module 
+          fFreeResult = FreeLibrary ( hinstLib ); 
+          mio_pull  = NULL;
+	      mio_open  = NULL;
+	      mio_close = NULL;
+	      g_hDLL    = NULL;						
+    } 	
+  	return 0;  
+} 
+
+//--------------------------------------------------------------------
+int __stdcall cb_PowerOnOxford(HANDLE hCOM, void *usr_arg)
+{
+  
+    EdgeCardThreadExec( hCOM );
+	
+    return 0;
+}
+
+void SetMetaConnectReq ( void ) {
+
+//******************************************************************************** 
+//*************************************************************************************** 
+//-------------------Baseband chipset select----------------------------  
+//*****************************************************************************************
+//*************************************************************************** 
+//  -----------Boot ROM and Sync with Target ----------------------
+//***************************************************************************
+	
+	tMetaModem.tMETA_Connect_Req.com_port = GetCOMPort();
+	
+	tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_bbchip_type = GetBBChip ();    
+	
+	tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_ext_clock = AUTO_DETECT_EXT_CLOCK;
+	
+	tMetaModem.tMETA_Connect_Req.baudrate[0] = META_BAUD115200;
+    tMetaModem.tMETA_Connect_Req.baudrate[1] = META_BAUD460800;
+    tMetaModem.tMETA_Connect_Req.baudrate[2] = META_BAUD921600;
+    tMetaModem.tMETA_Connect_Req.baudrate[3] = META_BAUD_END;	
+	
+		
+    tMetaModem.tMETA_Connect_Req.flowctrl = META_SW_FLOWCTRL;
+    tMetaModem.tMETA_Connect_Req.ms_connect_timeout = META_CONNECT_TIME_OUT;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_ms_boot_timeout = BOOT_INFINITE;
+	tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_max_start_cmd_retry_count = META_BOOT_TIMERS;
+	
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_in_brom_stage = NULL;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_in_brom_stage_arg = NULL;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_speedup_brom_baudrate = _TRUE; //115200
+    
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_ready_power_on_wnd_handle = NULL;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_ready_power_on_wparam = NULL;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_ready_power_on_lparam = NULL;
+	
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_auth_handle = Get_AuthHandle();
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_sla_challenge = SLA_Challenge;//SLA_Challenge(NULL,NULL,0,NULL,NULL);
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_sla_challenge_arg = NULL;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_sla_challenge_end = SLA_Challenge_END; // NULL;
+    tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_sla_challenge_end_arg = NULL;
+                
+        // EDGE PC card
+	tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_com_init_stage_arg = NULL;
+	switch ( GetTargetType() )
+    {
+    	case TARGET_FEATURE_PHONE:
+			tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_com_init_stage = NULL;
+			
+			break;
+
+		case TARGET_SMARTPHONE:
+			tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_com_init_stage = NULL;
+			break;
+
+		case PCMCIA_CARD:
+			tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_cb_com_init_stage = cb_PowerOnOxford;
+			break;
+			
+		default:
+			break;
+	}
+                
+    //usb mode
+	tMetaModem.tMETA_Connect_Req.boot_meta_arg.m_usb_enable = IsUSBCOMPort ();
+}
+
+//---------------------------------------------------
+void SetMetaModemConnectReq ( void ) {
+
+//******************************************************************************** 
+//*************************************************************************************** 
+//-------------------Baseband chipset select----------------------------  
+//*****************************************************************************************
+//*************************************************************************** 
+//  -----------Boot ROM and Sync with Target ----------------------
+//***************************************************************************
+	
+	tMeta6516Modem.tMETA_Connect_Req.com_port = GetCOMPort();
+	
+	tMeta6516Modem.tMETA_Connect_Req.baudrate[0] = META_BAUD115200;
+    tMeta6516Modem.tMETA_Connect_Req.baudrate[1] = META_BAUD460800;
+    tMeta6516Modem.tMETA_Connect_Req.baudrate[2] = META_BAUD921600;
+    tMeta6516Modem.tMETA_Connect_Req.baudrate[3] = META_BAUD_END;	
+	
+    tMeta6516Modem.tMETA_Connect_Req.flowctrl = META_SW_FLOWCTRL;
+    tMeta6516Modem.tMETA_Connect_Req.ms_connect_timeout = META_CONNECT_TIME_OUT;
+}
+
+//----------------------------------------------------------------------
+kal_bool ExitMetaModemMode ( void )
+{
+	return META_ShutDownTarget_r( g_Meta.iMeta_handle );
+};
+
+//----------------------------------------------------------------------
+//return KAL_FALSE -> OK
+//return KAL_TURE  -> ERROR
+kal_bool EnterMetaModemMode ( void )
+{
+   
+	Meta_Boot_Arg meta_arg;
+	
+	if ( GetIsEnableMetaLog() )
+	{
+		//Eboot_DebugOn ();
+		META_DebugOn ();
+	}
+	else
+	{
+		//Eboot_DebugOff ();
+		META_DebugOff ();
+	}
+	
+    meta_arg.read_retry_time = 0;		  // 0 means use default value 2400 times
+    meta_arg.read_interval_timeout = 0;   // 0 means use default value 10 ms
+	
+	if ( EBOOT_SUCCESS != SP_BootAsMeta ( GetCOMPort(), BaudMap[GetBaudRate()], meta_arg ))
+	{
+		MessagePopup ("Eboot dll Warning", "Comm port doesn't exist, or Can't sync with phone.");
+
+		return KAL_TRUE;	
+	}
+	//----------------------------Meta Connect to target-------------
+    tMeta6516Modem.eMeta_Result= META_ConnectInMetaMode_r (g_Meta.iMeta_handle, &tMeta6516Modem.tMETA_Connect_Req, &g_Meta.bootstop, &tMeta6516Modem.tMETA_Connect_Report); 
+    switch ( tMeta6516Modem.eMeta_Result )
+    {
+		case META_SUCCESS:
+
+			 return KAL_FALSE; 
+			 break;
+
+		case META_INCORRECT_TARGET_VER:
+			
+		 	MessagePopup ("Meta Warning", "Modem NVRAM database inconsistent with target...");
+			break;
+
+		case META_COMM_FAIL:
+
+			MessagePopup ("Meta Error", "Open COM port fail...");
+			break;
+
+		case META_COM_ERROR:
+
+			MessagePopup ("Meta Error", "COM port doesn't exist...");
+			break;
+
+		case META_TIMEOUT:	
+
+			MessagePopup ("Meta Error", "Connecting timeout...");
+			break;
+
+		case META_FAILED:
+			MessagePopup ("Meta Error", "Can't connect to target.\nPlease Enable Meta Dll.Log to get detail cause... ");
+			break;
+
+		default: 
+			break;
+    }	
+    
+    return KAL_TRUE;
+
+};
+//----------------------------------------------------------------------
+//return KAL_FALSE -> OK
+//return KAL_TURE  -> ERROR
+//
+kal_bool EnterMetaMode () {
+
+	if ( GetIsEnableMetaLog() )
+	{
+		Brom_DebugOn ();
+		META_DebugOn ();
+	}
+	else
+	{
+		Brom_DebugOff ();
+		META_DebugOff ();
+	}
+	
+	//----------------------------Meta Connect to target-------------
+    tMetaModem.eMetaApp_Result = METAAPP_ConnectWithTarget (g_Meta.iMeta_handle, &tMetaModem.tMETA_Connect_Req, &g_Meta.bootstop, &tMetaModem.tMETA_Connect_Report); 
+    switch ( tMetaModem.eMetaApp_Result )
+    {
+		case METAAPP_SUCCESS:
+
+			 return KAL_FALSE; 
+			 break;
+			 
+		case METAAPP_NVRAM_DB_INCONSISTENT:
+			
+		 	MessagePopup ("Meta Warning", "Modem NVRAM database inconsistent with target...");
+			break;
+
+		case METAAPP_OPEN_UART_FAIL:
+
+			MessagePopup ("Meta Error", "Open COM port fail...");
+			break;
+
+		case METAAPP_COM_ERROR:
+
+			MessagePopup ("Meta Error", "COM port doesn't exist...");
+			break;
+
+		case METAAPP_TIMEOUT_FAIL:	
+
+			MessagePopup ("Meta Error", "Connecting timeout...");
+			break;
+
+		case 	METAAPP_BOOT_FAIL:
+			MessagePopup ("Meta Error", "Can't connect to target.\nPlease Enable Meta Dll.Log to get detail cause... ");
+			break;
+
+		default: 
+			break;
+    }	
+    
+    return KAL_TRUE;
+
+}
+//----------------------------------------------------------------------
+kal_bool ExitMetaMode ( void ) {
+
+	return METAAPP_DisconnectWithTarget( g_Meta.iMeta_handle );
+}
+
+//----------------------------------------------------------------------
+void GetTargetInfo(){
+
+}
+
+//-----------------------------------------------------------------------
+kal_int8 Ascii2BCD ( kal_uint8 iAscii )
+{
+	kal_uint8 iBCD;
+	if ( iAscii>= '0' && iAscii<= '9')
+	{
+        iBCD = iAscii - '0';
+			
+	} else if ( iAscii>= 'a' && iAscii<= 'f' )
+	{
+        iBCD = iAscii - 'a' + 0x0a;
+		
+	} else if ( iAscii>= 'A' && iAscii<= 'F' )
+	{
+        iBCD = iAscii - 'A' + 0x0a;
+	} else
+	{
+		return -1;
+	}
+
+	return iBCD;
+
+}
+
+//----------------------------------------------------------------------
+void func_barcode_meta_hdlr_smart_phone_modem (){
+
+	kal_uint8 strTip [256];
+	kal_uint8 strBarcode_W [ BARCODE_MAX_LENGTH + 1 ];
+	kal_uint8 strBarcode_R [ BARCODE_MAX_LENGTH + 1 ];
+	
+	sprintf ( strLog, ">>Step: Enter func_barcode_meta_hdlr_smart_phone_modem();\n");
+	strcat ( strLog,  "        Write Barcode to smartphone modem nvram\n");
+	UpdateLog ( strLog, 0 );
+	
+	sprintf ( strLog, ">>Step: Start to Init Modem Nvram Database...\n");
+	UpdateLog ( strLog, 0 );
+	
+	if ( IsNvramDatabaseInit () ) 
+	{
+		return;
+	}
+	
+	SetMetaModemConnectReq ();
+	
+	tMeta6516Modem.eRunStatus = RUN_STATUS;
+
+	while ( CANCEL_STATUS != tMeta6516Modem.eRunStatus && KAL_TRUE != GetBootStopFlag())
+	{
+		
+		sprintf ( strTip, "Please scan Smartphone Barcode code, then PowerOn phone...");
+		tMeta6516Modem.eRunStatus = InputBoxPopup ("Barcode (<64 Bytes)", strTip, (kal_int8*) strBarcode_W, BARCODE_MAX_LENGTH );
+			
+		if ( OK_STATUS == tMeta6516Modem.eRunStatus ) 
+		{
+		    if ( EnterMetaModemMode () ) { ExitMetaModemMode (); continue; }
+			tMeta6516Modem.eMeta_Result = METAAPP_writeBarcodetoNVRAM( g_Meta.iMeta_handle, strBarcode_W, 5000 );
+			switch ( tMeta6516Modem.eMeta_Result )
+   			{
+				case METAAPP_SUCCESS:
+					break;
+			 
+				default:
+					MessagePopup ("Barcode Error", " Write Barcode error");
+					break;	
+			}
+			
+			tMeta6516Modem.eMeta_Result = METAAPP_readBarcodefromNVRAM( g_Meta.iMeta_handle, 5000, strBarcode_R );
+			switch ( tMeta6516Modem.eMeta_Result )
+   			{
+				case METAAPP_SUCCESS:
+					break;
+			 
+				default:
+					MessagePopup ("Barcode Error", " Read Barcode error");
+					break;	
+			}
+
+			if ( strcmp ( strBarcode_R, strBarcode_W )){
+				
+				MessagePopup ("Barcode Error", " Read/Write check Barcode error");
+				
+			}
+			ExitMetaModemMode ();
+		} 
+	
+	}//while ()
+
+}
+
+//----------------------------------------------------------------------
+void func_barcode_meta_hdlr_feature_phone (){
+
+	kal_uint8 strTip [256];
+	kal_uint8 strBarcode_W [ BARCODE_MAX_LENGTH + 1 ];
+	kal_uint8 strBarcode_R [ BARCODE_MAX_LENGTH + 1 ];
+	
+	
+	if ( IsNvramDatabaseInit () ) return;
+	
+	SetMetaConnectReq ();
+	
+	tMetaModem.eRunStatus = RUN_STATUS;
+
+	while ( CANCEL_STATUS != tMetaModem.eRunStatus && KAL_TRUE != GetBootStopFlag())
+	{
+		
+		sprintf ( strTip, "Please scan Barcode code, then PowerOn phone...");
+		tMetaModem.eRunStatus = InputBoxPopup ("Barcode (<64 Bytes)", strTip, (kal_int8*) strBarcode_W, BARCODE_MAX_LENGTH );
+			
+		if ( OK_STATUS == tMetaModem.eRunStatus ) 
+		{
+		    if ( EnterMetaMode () ) { ExitMetaMode (); continue; }
+			tMetaModem.eMetaApp_Result = METAAPP_writeBarcodetoNVRAM( g_Meta.iMeta_handle, strBarcode_W, 5000 );
+			switch ( tMetaModem.eMetaApp_Result )
+   			{
+				case METAAPP_SUCCESS:
+					break;
+			 
+				default:
+					MessagePopup ("Barcode Error", " Write Barcode error");
+					break;	
+			}
+			
+			tMetaModem.eMetaApp_Result = METAAPP_readBarcodefromNVRAM( g_Meta.iMeta_handle, 5000, strBarcode_R );
+			switch ( tMetaModem.eMetaApp_Result )
+   			{
+				case METAAPP_SUCCESS:
+					break;
+			 
+				default:
+					MessagePopup ("Barcode Error", " Read Barcode error");
+					break;	
+			}
+
+			if ( strcmp ( strBarcode_R, strBarcode_W )){
+				
+				MessagePopup ("Barcode Error", " Read/Write check Barcode error");
+				
+			}
+			ExitMetaMode ();
+		} 
+	
+	}//while ()
+
+}
+//------------------------------------------------------
+void func_imei_meta_hdlr_smart_phone_modem ()
+{
+
+	IMEISV_struct_T tIMEIScanBack,tImei_Svn_Pad;
+	kal_uint8 iIMEICheckSum, i;
+	kal_uint8 strTip [256];
+
+	sprintf ( strLog, ">>Step: Enter func_imei_meta_hdlr_smart_phone_modem();\n");
+	strcat ( strLog,  "        Write IMEI to smartphone modem nvram\n");
+	UpdateLog ( strLog, 0 );
+	
+	sprintf ( strLog, ">>Step: Start to Init Modem Nvram Database...\n");
+	UpdateLog ( strLog, 0 );
+		
+	if ( IsNvramDatabaseInit () )
+	{
+		sprintf ( strLog, "   Error: Init Modem Nvram Database failed.\n");
+		UpdateLog ( strLog, 100);
+		return;
+	}
+
+	sprintf ( strLog, "   OK: Init Modem Nvram Database successfully.\n");
+	UpdateLog ( strLog, 100 );
+	
+	SetMetaModemConnectReq ();
+	
+	tMeta6516Modem.eRunStatus = RUN_STATUS;
+	while ( CANCEL_STATUS != tMeta6516Modem.eRunStatus && KAL_TRUE != GetBootStopFlag() )
+	{
+		sprintf ( strLog, "\n>>---------------------------------------------------<<\n" );
+		UpdateLog ( strLog, 0 );	
+		
+		for ( i = 0; i<= GetIsDualImei(); i++ )
+		{
+			if ( GetIsDualImei() )
+			{
+				if ( i != GetIsDualImei() ) 
+				{
+					
+					sprintf ( strLog, ">>Step: Scan Gemini 1st IMEI.\n");
+					UpdateLog ( strLog, 10 );
+					
+				    sprintf ( strTip, "Please scan Geimin 1st IMEI code, then PowerOn phone..." );
+				} 
+				else 
+				{
+					sprintf ( strLog, ">>Step: Scan Gemini 2nd IMEI.\n");
+					UpdateLog ( strLog, 10 );
+					
+					sprintf ( strTip, "Please scan Geimin 2nd IMEI code......" );
+
+				}
+				
+			} 
+			else 
+			{
+				sprintf ( strLog, ">>Step: Scan Smartphone IMEI.\n");
+				UpdateLog ( strLog, 10 );
+				
+				sprintf ( strTip, "Please scan Smartphone IMEI code, then PowerOn phone...");
+			}
+
+			
+			tMeta6516Modem.eRunStatus = InputBoxPopup ("IMEI (15 Bytes)", strTip, (kal_int8*) &tImei_Svn_Pad.imei, IMEI_MAX_LENGTH);
+			if ( OK_STATUS == tMeta6516Modem.eRunStatus ) 
+			{
+				sprintf ( strLog, "    OK: IMEI = \"%s\".\n", tImei_Svn_Pad.imei );
+				UpdateLog ( strLog, 20 );
+				
+				if ( i == 0 ) 
+				{
+					sprintf ( strLog, ">>Step: Start to Connect with target.\n" );
+					UpdateLog ( strLog, 30 );
+					
+				    if ( EnterMetaModemMode () ) 
+					{
+						ExitMetaModemMode ();
+
+						sprintf ( strLog, "   Error: Connect failed, Exit Meta Mode and turn to next phone.\n" );
+						UpdateLog ( strLog, 100 );
+						break; 
+					}
+					sprintf ( strLog, "   OK: Connect successfully.\n" );
+					UpdateLog ( strLog, 40 );
+				} 
+
+				if ( !GetIsSVNPAD_Enable ())
+				{	
+
+					sprintf ( strLog, ">>Step: To get SVN and PAD from phone.\n" );
+					UpdateLog ( strLog, 40 );
+					
+					if ( METAAPP_readIMEIfromNVRAM_Ex3 ( g_Meta.iMeta_handle, 5000, i+1, &tIMEIScanBack))
+					{
+
+						sprintf ( strLog, "   Error: METAAPP_readIMEIfromNVRAM_Ex3 fail.\n" );
+						UpdateLog ( strLog, 100 );
+
+						MessagePopup ("Meta Error", "Meta IMEI read fail!"); 
+						break;
+				
+					}
+								
+					tImei_Svn_Pad.pad = tIMEIScanBack.pad ;
+					tImei_Svn_Pad.svn = tIMEIScanBack.svn ;
+				} else {
+
+					tImei_Svn_Pad.pad = GetSVNPAD().pad;
+					tImei_Svn_Pad.svn = GetSVNPAD().svn;
+				}
+						
+				sprintf ( strLog, "   OK: SVN=%x and PAD=%x \n",tImei_Svn_Pad.svn, tImei_Svn_Pad.pad );
+				UpdateLog ( strLog, 50 );	
+				
+				sprintf ( strLog,  ">>Step: Start to write. CheckSum=%d, IMEILock=%d.\n", GetIsImeiCheckSum (), GetIsImeiLock());
+				UpdateLog ( strLog, 70 );	
+				
+				tMeta6516Modem.eMeta_Result = METAAPP_writeIMEItoNVRAM_Ex3( g_Meta.iMeta_handle, 5000, GetIsImeiCheckSum (), GetIsImeiLock(), i+1, &tImei_Svn_Pad);
+				switch ( tMeta6516Modem.eMeta_Result )
+    			{
+					case METAAPP_SUCCESS:
+						
+						sprintf ( strLog, "   OK: Write IMEI successfully."  );
+						UpdateLog ( strLog, 90 );	
+				
+						break;
+			 
+					case METAAPP_NVRAM_COMPOSE_IMEI_FAIL:
+						
+						sprintf ( strLog, "   Error: IMEI Check Sum error!"  );
+						UpdateLog ( strLog, 90 );	
+			
+		 				MessagePopup ("IMEI CheckSum error", " CheckSum of IMEI error!");
+						break;
+					default: 
+						
+						sprintf ( strLog, "   Error: Write IMEI fail. Meta Result = %d", tMeta6516Modem.eMeta_Result );
+						UpdateLog ( strLog, 100 );	
+						
+						break;	
+				}
+				
+			}
+			else
+			{
+				sprintf ( strLog, "   Error: Cancel scan IMEI DiagBox.\n");
+				UpdateLog ( strLog, 90 );
+				break;
+			} 
+			
+
+		} // for (;;)
+
+		sprintf ( strLog, ">>Step: Meta Disconnect with target.\n");
+		UpdateLog ( strLog, 100 );
+		
+		ExitMetaModemMode ();		
+	}
+	ClearLog ();
+}
+//-----------------------------------------------------------
+void func_imei_meta_hdlr_feature_phone ()
+{
+
+	IMEISV_struct_T tIMEIScanBack,tImei_Svn_Pad;
+	kal_uint8 iIMEICheckSum, i;
+	kal_uint8 strTip [256];
+
+	sprintf ( strLog, ">>---------------------------------------------------<<\n" );
+	strcat ( strLog, ">>Step: Enter func_imei_meta_hdlr_feature_phone();\n");
+	strcat ( strLog,  "        Write IMEI to feature phone nvram\n");
+	UpdateLog ( strLog, 0 );
+	
+	sprintf ( strLog, ">>Step: Start to Init feature phone Database...\n");
+	UpdateLog ( strLog, 60 );
+	
+	if ( IsNvramDatabaseInit () )
+	{
+		sprintf ( strLog, "   Error: Init feature phone Database failed.\n");
+		UpdateLog ( strLog, 100);
+		return;
+	}
+	
+	sprintf ( strLog, "   OK: Init feature phone Database successfully.\n");
+	UpdateLog ( strLog, 100 );
+	
+	SetMetaConnectReq ();
+
+	tMetaModem.eRunStatus = RUN_STATUS;
+
+	while ( CANCEL_STATUS != tMetaModem.eRunStatus && KAL_TRUE != GetBootStopFlag())
+	{
+		sprintf ( strLog, "\n>>---------------------------------------------------<<\n" );
+		UpdateLog ( strLog, 0 );
+		
+		for ( i = 0; i<= GetIsDualImei(); i++ )
+		{
+			if ( GetIsDualImei() )
+			{
+				if ( i != GetIsDualImei() ) 
+				{
+					sprintf ( strLog, ">>Step: Scan Gemini 1st IMEI.\n");
+					UpdateLog ( strLog, 10 );
+					
+				    sprintf ( strTip, "Please scan Geimin 1st IMEI code, then PowerOn phone..." );
+				} 
+				else 
+				{
+					sprintf ( strLog, ">>Step: Scan Gemini 2nd IMEI.\n");
+					UpdateLog ( strLog, 10 );
+					
+					sprintf ( strTip, "Please scan Geimin 2nd IMEI code......" );
+				}
+				
+			} 
+			else 
+			{
+				sprintf ( strLog, ">>Step: Scan feature phone IMEI.\n");
+				UpdateLog ( strLog, 10 );
+				
+				sprintf ( strTip, "Please scan IMEI code, then PowerOn phone...");
+			}
+
+			
+			tMetaModem.eRunStatus = InputBoxPopup ("IMEI (15 Bytes)", strTip, (kal_int8*) &tImei_Svn_Pad.imei, IMEI_MAX_LENGTH);
+
+			if ( OK_STATUS == tMetaModem.eRunStatus ) 
+			{
+
+				sprintf ( strLog, "    OK: IMEI = \"%s\".\n", tImei_Svn_Pad.imei );
+	        	UpdateLog ( strLog, 20 );
+			
+				if ( i == 0 ) 
+				{
+					sprintf ( strLog, ">>Step: Start to Connect with target.\n" );
+					UpdateLog ( strLog, 30 );
+					
+				    if ( EnterMetaMode () )
+					{
+						ExitMetaMode (); 
+						
+						sprintf ( strLog, "   Error: Connect failed, Exit Meta Mode and turn to next phone.\n" );
+						UpdateLog ( strLog, 100 );
+						
+						break; 
+					}
+					sprintf ( strLog, "   OK: Connect successfully.\n" );
+					UpdateLog ( strLog, 40 );
+				} 
+
+				if ( !GetIsSVNPAD_Enable ())
+				{
+					sprintf ( strLog, ">>Step: To get SVN and PAD from phone.\n" );
+					UpdateLog ( strLog, 40 );
+					
+					if ( METAAPP_readIMEIfromNVRAM_Ex3 ( g_Meta.iMeta_handle, 5000, i+1, &tIMEIScanBack))
+					{
+		           		sprintf ( strLog, "   Error: METAAPP_readIMEIfromNVRAM_Ex3 fail.\n" );
+						UpdateLog ( strLog, 100 );
+						
+               			MessagePopup ("Meta Error", "Meta IMEI read fail!"); 
+						break;
+				
+					}
+					tImei_Svn_Pad.pad = tIMEIScanBack.pad ;
+					tImei_Svn_Pad.svn = tIMEIScanBack.svn ;
+				} else {
+
+					tImei_Svn_Pad.pad = GetSVNPAD().pad;
+					tImei_Svn_Pad.svn = GetSVNPAD().svn;
+				}
+				
+				sprintf ( strLog, "   OK: SVN=0x%x and PAD=0x%x \n",tImei_Svn_Pad.svn, tImei_Svn_Pad.pad );
+				UpdateLog ( strLog, 50 );	
+				
+				sprintf ( strLog,  ">>Step: Start to write. CheckSum=%d, IMEILock=%d.\n", GetIsImeiCheckSum (), GetIsImeiLock());
+				UpdateLog ( strLog, 70 );	
+				
+				
+				tMetaModem.eMetaApp_Result = METAAPP_writeIMEItoNVRAM_Ex3( g_Meta.iMeta_handle, 5000, GetIsImeiCheckSum (), GetIsImeiLock(), i+1, &tImei_Svn_Pad);
+				switch ( tMetaModem.eMetaApp_Result )
+    			{
+					case METAAPP_SUCCESS:
+						break;
+			 
+					case METAAPP_NVRAM_COMPOSE_IMEI_FAIL:
+			
+		 				MessagePopup ("IMEI CheckSum error", " CheckSum of IMEI error!");
+						break;
+					default: 
+						break;	
+				}
+				
+			} else 
+			{
+				sprintf ( strLog, "   Error: Cancel scan IMEI DiagBox.\n");
+				UpdateLog ( strLog, 90 );
+
+				break;
+			} 
+
+		} // for (;;)
+
+		sprintf ( strLog, ">>Step: Meta Disconnect with target.\n");
+		UpdateLog ( strLog, 100 );
+
+		ExitMetaMode ();
+		
+	}
+	ClearLog ();
+}
+
+//----------------------------------------------------------------------	
+void func_bt_address_meta_hdlr_feature_phone ( void )
+{
+    kal_uint8 strTip [256] , i, iBCD_L, iBCD_H;
+	
+	BT_ModuleID_S BT_ID;
+
+	S_HANDSET_BT_ADRRESS tBtAddress_W, tBtAddress_R;
+	kal_uint8 strBtAddress_W [ BT_ADDRESS_MAX_LENGTH + 1 ];
+	kal_uint8 strBtAddress_R [ BT_ADDRESS_MAX_LENGTH + 1 ];
+	
+	if ( IsNvramDatabaseInit () ) return;
+	
+	SetMetaConnectReq ();
+
+	tMetaModem.eRunStatus = RUN_STATUS;
+
+	while ( CANCEL_STATUS != tMetaModem.eRunStatus && KAL_TRUE != GetBootStopFlag())
+	{
+		
+		sprintf ( strTip, "Please scan BT address, then Power On phone..." );
+		tMetaModem.eRunStatus = InputBoxPopup ("BT Address (12 Bytes)", strTip, (kal_int8*) strBtAddress_W, BT_ADDRESS_MAX_LENGTH );
+			
+		if ( OK_STATUS == tMetaModem.eRunStatus ) 
+		{
+		    if ( EnterMetaMode () ) { ExitMetaMode (); continue; }
+
+			if ( META_QueryIfFunctionSupportedByTarget_r ( g_Meta.iMeta_handle, 5000, "META_BT_QueryModuleID_r" ))
+			{
+				if ( META_BT_QueryModuleID_r (g_Meta.iMeta_handle, 5000, &BT_ID ))
+				{
+					MessagePopup ("BT Address Error", " Query BT Module fail!");
+				}
+
+			}
+
+			for ( i = 0; i < BD_ADDR_LEN; i++ )
+			{
+				 
+				if ( iBCD_H = Ascii2BCD( strBtAddress_W [i] )) continue;
+				if ( iBCD_L = Ascii2BCD( strBtAddress_W [i + 1] )) continue;
+
+				if ( BTMODULE_MT6601 == BT_ID.id || BTMODULE_RFMD3500 == BT_ID.id )
+				{
+					tBtAddress_W.bd_addr [BD_ADDR_LEN-1 - i] = iBCD_H<<4 | iBCD_L;
+				}
+				else
+				{	
+					tBtAddress_W.bd_addr [i] = iBCD_H<<4 | iBCD_L;
+				}
+			}
+
+			if ( 0 )
+			{
+				if ( META_BT_DisableNvramOnlineUpdate_r ( g_Meta.iMeta_handle, 5000 ))
+				{
+					MessagePopup ( "BT Address Error", " META_BT_DisableNvramOnlineUpdate_r error" );
+				}
+			}
+
+			switch ( BT_ID.id )	
+			{
+				case 17:  //6601
+					if ( METAAPP_BT_writeMT6601BTAddrtoNVRAM ( g_Meta.iMeta_handle, 5000, &tBtAddress_W ))
+					{
+						MessagePopup ("BT Address Error", "BD Address write fail");  
+					}
+					
+					if ( METAAPP_BT_readMT6601BTAddrfromNVRAM ( g_Meta.iMeta_handle, 5000, &tBtAddress_R ))
+					{
+						MessagePopup ("BT Address Error", "BD Address read fail");  
+					}
+					
+					break;
+				case 33:  //RFMD
+					if ( METAAPP_BT_writeRFMD3500BTAddrtoNVRAM ( g_Meta.iMeta_handle, 5000, &tBtAddress_W ))
+					{
+						MessagePopup ("BT Address Error", "BD Address write fail");
+					}
+
+					if ( METAAPP_BT_readMT6601BTAddrfromNVRAM ( g_Meta.iMeta_handle, 5000, &tBtAddress_R ))
+					{
+						MessagePopup ("BT Address Error", "BD Address read fail");  
+					}
+					
+					break;
+				default:
+					break;
+			}
+
+			
+			if ( strcmp ( tBtAddress_W.bd_addr, tBtAddress_R.bd_addr )){
+				
+				MessagePopup ("BT Address Error", " Read/Write BT Address inconsist");
+				
+			}
+			ExitMetaMode ();
+		} 
+		
+	}//while ()
+
+}
+
+
+//----------------------------------------------------------------------
+void func_wifi_mac_meta_hdlr_feature_phone ( void )
+{
+	kal_uint8 strTip [256] , i, iBCD_L, iBCD_H;
+	
+	WiFi_MacAddress_S tWifiMac_W, tWifiMac_R;
+	kal_uint8 strWifiMac_W [ WIFI_MAC_MAX_LENGTH + 1 ];
+	kal_uint8 srtWifiMac_R [ WIFI_MAC_MAX_LENGTH + 1 ];
+
+	if ( IsNvramDatabaseInit () ) return;
+	
+	SetMetaConnectReq ();
+
+	tMetaModem.eRunStatus = RUN_STATUS;
+
+	while ( CANCEL_STATUS != tMetaModem.eRunStatus && KAL_TRUE != GetBootStopFlag())
+	{
+		
+		sprintf ( strTip, "Please scan Wifi MAC, then Power On phone..." );
+		tMetaModem.eRunStatus = InputBoxPopup ("Wifi MAC (12 Bytes)", strTip, (kal_int8*) strWifiMac_W, WIFI_MAC_MAX_LENGTH );
+			
+		if ( OK_STATUS == tMetaModem.eRunStatus ) 
+		{
+		    if ( EnterMetaMode () ) { ExitMetaMode (); continue; }
+
+			for ( i = 0; i < MAC_ADDR_LEN; i++ )
+			{
+				 
+				if ( iBCD_H = Ascii2BCD( strWifiMac_W [i] )) continue;
+				if ( iBCD_L = Ascii2BCD( strWifiMac_W [i + 1] )) continue;
+
+				tWifiMac_W.mac_addr [i] = iBCD_H<<4 | iBCD_L;
+			}
+
+			if ( METAAPP_WiFi_writeWiFiMacAddressToNVRAM ( g_Meta.iMeta_handle, 5000, &tWifiMac_W ))
+			{
+				MessagePopup ("Wifi MAC Error", "Wifi MAC write fail");
+			}   
+			
+			if ( METAAPP_WiFi_readWiFiMacAddressFromNVRAM ( g_Meta.iMeta_handle,5000,&tWifiMac_R)); 
+
+			if ( strcmp ( tWifiMac_R.mac_addr, tWifiMac_R.mac_addr ))
+			{
+				
+				MessagePopup ("Wifi MAC Error", " Read/Write Wifi MAC inconsist");
+			}
+			ExitMetaMode ();
+		} 	
+	}//while ()
+
+}
+
+

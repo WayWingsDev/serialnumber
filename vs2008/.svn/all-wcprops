@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/vs2008
+END
+Microsoft.VC90.CRT.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/vs2008/Microsoft.VC90.CRT.manifest
+END
+msvcm90.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/vs2008/msvcm90.dll
+END
+msvcp90.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/vs2008/msvcp90.dll
+END
+msvcr90.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SN_WRITER/!svn/ver/98/branches/SN_Improve/Custom_Release/vs2008/msvcr90.dll
+END

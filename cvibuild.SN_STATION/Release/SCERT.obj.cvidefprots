@@ -1,0 +1,20 @@
+[SPATE_SCERT_Create]
+Class="Function"
+Prototype="unsigned char SPATE_SCERT_Create();"
+
+[SPATE_SCERT_Destroy]
+Class="Function"
+Prototype="unsigned char SPATE_SCERT_Destroy();"
+
+[SPATE_SCERT_Load]
+Class="Function"
+Prototype="unsigned char SPATE_SCERT_Load(const char *scert_filepath);"
+
+[SPATE_SCERT_Unload]
+Class="Function"
+Prototype="unsigned char SPATE_SCERT_Unload();"
+
+[SPATE_Get_ScertHandle]
+Class="Function"
+Prototype="struct SP_SCERT_HANDLE *SPATE_Get_ScertHandle();"
+

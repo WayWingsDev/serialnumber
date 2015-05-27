@@ -1,0 +1,151 @@
+HDRS = 	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\vs2008"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\wmmetadll"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2013\\sdk\\include"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\META dll"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\Export"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\sourceinsight"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\res"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib"
+	"c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2013\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2013\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\include\\clang\\2.9"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2013\\bin"
+	"c:\\ProgramData\\National Instruments\\CVI2013\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "android_dl_structure.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\eboot" ;
+LOCATE on "AtProcess.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\at_comm" ;
+LOCATE on "AtProcess.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\at_comm" ;
+LOCATE on "AUTH.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure" ;
+LOCATE on "AUTH.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure" ;
+LOCATE on "brom.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "com_enum.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "context.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "des.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure" ;
+LOCATE on "DOWNLOAD.H" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "ExecFunc.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "Execfunc.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "flashtool.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc" ;
+LOCATE on "flashtool_handle.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "fpexec.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "fpexec.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "general.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc" ;
+LOCATE on "interface.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\eboot" ;
+LOCATE on "mem_mt6205.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc" ;
+LOCATE on "meta.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\META dll" ;
+LOCATE on "METAAPP.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\Export" ;
+LOCATE on "MfSetupUtil.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\mf_Setup" ;
+LOCATE on "MfSetupUtil.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\mf_Setup" ;
+LOCATE on "mtk_mcu.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "mtk_resource.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "mtk_status.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "rs232Module.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\at_comm" ;
+LOCATE on "rs232Module.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\at_comm" ;
+LOCATE on "SCERT.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure" ;
+LOCATE on "SCERT.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure" ;
+LOCATE on "SLA.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc" ;
+LOCATE on "SLA.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc" ;
+LOCATE on "SLA_Challenge.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+LOCATE on "SN_STATION.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src" ;
+LOCATE on "SN_STATION.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\res" ;
+LOCATE on "sp_brom.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure" ;
+LOCATE on "spmeta.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\wmmetadll" ;
+LOCATE on "Thread.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "Thread.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "uipara.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\display_Log" ;
+LOCATE on "uipara.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\display_Log" ;
+LOCATE on "USBFinder.H" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\eboot" ;
+LOCATE on "USBSwitchDLLibrary.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\USB Switching" ;
+LOCATE on "wmexec.c" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "wmexec.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec" ;
+LOCATE on "xboot.h" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\mtk lib\\header\\BROM dll" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\at_comm\\AtProcess.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj" = 1 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AtProcess.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure\\AUTH.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj" = 2 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\AUTH.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec\\ExecFunc.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj" = 3 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\ExecFunc.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec\\fpexec.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj" = 4 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\fpexec.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\mf_Setup\\MfSetupUtil.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj" = 5 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\MfSetupUtil.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\at_comm\\rs232Module.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj" = 6 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\rs232Module.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\secure\\SCERT.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj" = 7 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SCERT.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\misc\\SLA.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj" = 8 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SLA.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\SN_STATION.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj" = 9 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec\\Thread.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj" = 10 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\Thread.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\display_Log\\uipara.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj" = 11 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\uipara.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\src\\exec\\wmexec.c" ;
+FILENUM on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj" = 12 ;
+DEFPROTS on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj" = "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj.out" ;
+PrjObjects += "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\wmexec.obj" ;
+Object "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\resources.res" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\resources.in.rc" ;
+MainFromObjects "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.exe" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\link_options.txt" ;
+Depends "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.exe" : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\resources.res" ;
+Depends "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\resources.res" :  "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\res\\SN_STATION.uir" ;
+Depends all : "c:\\Users\\javier.gonzalez\\Desktop\\SN_Write_tool_src_v2.1340.00\\cvibuild.SN_STATION\\Release\\SN_STATION.exe" ;
